@@ -1,0 +1,184 @@
+; Homing PLC for XPD VFM vertical motors 
+; 
+; This program sequences the homing of the three motors controlling the VFM
+; vertical jacks. 
+; 
+; Motor axes:
+; 1 - Upstream inboard vertical
+; 2 - Upstream outboard vertical
+; 3 - Downstream vertical
+
+; Initial configuration of state variables.
+; Homing State P Variable
+P800 = 0
+
+; Homing Status P Variable
+P801 = 0
+
+DEL GAT
+OPEN PLC8 CLEAR
+
+P801 = 1
+; Use P802 to control whether to move to next phase of homing
+;P802 = 0
+
+;---- Configuring State ----
+P800=1
+;Save high soft limits to P variables Pxx04..x19
+P805=I113
+P806=I213
+P807=I313
+;Save the low soft limits to P variables Pxx20..x35
+P821=I114
+P822=I214
+P823=I314
+;Save the home capture flags to P variables Pxx36..x51
+P837=I7012
+P838=I7022
+P839=I7032
+;Store 'not flag' to use in moving off a flag in P variables Pxx52..x67
+P853=P837^$C
+P854=P838^$C
+P855=P839^$C
+;Save the limit flags to P variables Pxx68..x83
+P869=I124
+P870=I224
+P871=I324
+;Save the current position to P variables Pxx84..x99
+P885=M162
+P886=M262
+P887=M362
+;Clear the soft limits
+I113=0
+I114=0
+I213=0
+I214=0
+I313=0
+I314=0
+
+; Move each bender motor to the unbent state at its negative limit switch. 
+
+  if (P801=1)
+		P800=8
+		; Execute the move commands for the vertical motors
+		M172=-100000000
+		M272=-100000000
+		M372=-100000000
+
+		cmd "#1J^* #2J^* #3J^*" 
+
+		; Wait for the move to complete
+		I5511 = 20 * 8388608/I10 ; Small delay to start moving
+		while (I5511 > 0)
+		endw
+		I5511 = 600000 * 8388608/I10 ; Now start checking the conditions
+		while (M140=0) ; At least one motor should not be In Position
+    and (M240=0) ; At least one motor should not be In Position
+    and (M340=0) ; At least one motor should not be In Position
+		and (M142=0) ; No following errors should be set for any motor
+		and (M242=0) ; No following errors should be set for any motor
+		and (M342=0) ; No following errors should be set for any motor
+		and (I5511 > 0) ; Check for timeout
+		and (P801 = 1) ; Check that we didn't abort
+		endw
+
+		; Check why we left the while loop
+		if (M142=1) ; If a motor hit a following error
+    or (M242=1)
+    or (M342=1)
+			P801 = 4
+		endif
+		if (I5511<0 or I5511=0) ; If we timed out
+			P801 = 3
+		endif
+
+  ; Wait for user to move to next step
+  ;while(P802 = 0)
+  ;endw
+  ;P802 = 0
+  
+    ; set up the homing capture flags
+    I7012 = 1
+    I7022 = 1
+    I7032 = 1
+
+    ; Issue the home command to find the encoder position
+		cmd "#1HM #2HM #3HM"
+
+		; Wait for the move to complete
+		I5511 = 20 * 8388608/I10 ; Small delay to start moving
+		while (I5511 > 0)
+		endw
+		I5511 = 600000 * 8388608/I10 ; Now start checking the conditions
+
+		while (M140=0) ; At least one motor should not be In Position
+    and (M240=0) ; At least one motor should not be In Position
+    and (M340=0) ; At least one motor should not be In Position
+		and (M142=0) ; No following errors should be set for any motor
+		and (M242=0) ; No following errors should be set for any motor
+		and (M342=0) ; No following errors should be set for any motor
+    and (M130=0) ; Should not stop on position limit
+    and (M230=0) ; Should not stop on position limit
+    and (M330=0) ; Should not stop on position limit
+		and (I5511 > 0) ; Check for timeout
+		and (P801 = 1) ; Check that we didn't abort
+		endw
+
+		; Check why we left the while loop
+		if (M142=1) ; If a motor hit a following error
+    or (M242=1)
+    or (M342=1)
+			P801 = 4
+		endif
+    if (M130=1) ; If a motor hit a limit switch
+    or (M230=1)
+    or (M330=1)
+      P801 = 5
+    endif
+		if (I5511<0 or I5511=0) ; If we timed out
+			P801 = 3
+		endif
+
+	endif
+
+
+;---- Done ----
+if (P801 = 1)
+	;If we've got this far without failing, set status and state done
+	P801=0
+	P800=7
+endif
+
+;---- Tidy Up ----
+;Stop all motors if they don't have a following error
+if (M142=0)
+	cmd "#1J/"
+endif
+if (M242=0)
+	cmd "#2J/"
+endif
+if (M342=0)
+	cmd "#3J/"
+endif
+
+;Restore the high soft limits from P variables Pxx04..x19
+I113=P805
+I213=P806
+I313=P807
+;Restore the low soft limits from P variables Pxx20..x35
+I114=P821
+I214=P822
+I314=P823
+;Restore the home capture flags from P variables Pxx36..x51
+I7012=P837
+I7022=P838
+I7032=P839
+;Restore the limit flags to P variables Pxx68..x83
+I124=P869
+I224=P870
+I324=P871
+
+DISABLE PLC8
+CLOSE
+
+

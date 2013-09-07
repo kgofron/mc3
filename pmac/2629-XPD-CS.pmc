@@ -1,0 +1,101 @@
+;REGISTERS USED
+;Q30 Q31 Q1000
+;P1000..1999
+
+;HOME CFG
+;1:encoder 2:HiTrig 10:lowTrig
+i7012,3,10=1   ;home is on encoder
+i7042=1  ;high trig
+i7112=1  ;high trig
+
+;capture flag select: 0:home 1:PLIM 2:NLIM 3:USER
+i7013,3,10=0  
+i7043=0  
+i7113=0
+
+;$800401:activate limit   $820401:desactivate limits
+i124,5,100=$800401  ;activate limit
+;i124,5,100=$820401  ;desactivate limit
+
+;vitesse de recherche du home (count/ms)
+i123,3,100=20
+i423,2,100=60
+ 
+;init des offset des homes  (1/16 count)
+i126,5,100=0
+
+;******************** Set-up and Definitions ********************
+&1
+CLOSE
+UNDEFINE ALL
+
+i5113,15,100=10 ; segmentation time (needed for lookahead)
+i5120,15,100=50 ; lookahead length (needed to limit max velocity to max in CS)
+i5150,15,100=1  ; Enable kinematics
+
+I15=0 ; Trig calculations in degrees
+#1->I
+#2->I
+#3->I
+
+
+#define FACT Q1000
+;FACT=51200
+FACT=400*8*32/2; count/mm : 400(step/rev) * 8(reductor) * 32(microstep) / 2(mm/rev)
+   
+;******************** Motion Program Text ***********************
+OPEN PROG 1 CLEAR
+LINEAR
+ABS
+FRAX
+TA100
+TS0			;Set S-Curve Acceleration Time
+F(P1100)		;Set Move Feedrate (Velocity)
+X(P1101)Y(P1102)Z(P1103);pitch roll translation
+CLOSE
+
+; To run this program: &1B1 R
+; dis plc 7
+; #1 => select motor 1
+; &1 => select coords 1
+; #1j/ => close loop
+
+; Forward-kinematic program buffer for repeated execution
+OPEN FORWARD ; Forward kinematics for CS 1
+CLEAR ; Erase existing contents
+Q30=(P1+P2)/(2.0*FACT);mm : M4 = (M1+M2)/2
+Q7=(P3/FACT-Q30)/1.470; mrad X:  Pitch = (M3-M4)/1.470
+Q8=(P1-P2)/(0.280*FACT) ; mrad Y: Roll = (M1-M2)/0.280
+Q9=((660*P3/FACT)+(810*Q30))/1470 ; mm Z: Translation = (660*M3+810*M4)/1470
+CLOSE
+
+OPEN INVERSE
+CLEAR
+P3=(Q9+0.810*Q7)*FACT ; M3 = T+0.810*P
+Q31=(Q9-0.660*Q7)*FACT ; M4 = T-0.660P
+P1=Q31+0.140*Q8*FACT ; M1 = M4+0.140R
+P2=Q31-0.140*Q8*FACT ; M2 = M4-0.140R
+CLOSE
+
+; Forward-kinematic PLC program buffer for position reporting
+OPEN PLC 10
+CLEAR ; Erase existing contents
+P1001=M162/(I108*32) ; Actual M1 position (count)
+P1002=M262/(I208*32) ; Actual M2 position (count)
+P1003=M362/(I308*32) ; Actual M3 position (count)
+
+P1050=(P1001+P1002)/(2.0*FACT)       ; Actual M1+M2 position (mm)
+P1051=(P1003/FACT-P1050)/1.470     ; Pitch (mrad)
+P1052=(P1001-P1002)/(0.280*FACT)     ; Roll (mrad)
+P1053=((660*P1003/FACT)+(810*P1050))/1470  ; Translation (mm)
+
+P1004=M462/(I408*32) ; Actual M4 position (count)
+P1005=M562/(I508*32) ; Actual M5 position (count)
+
+P1011=M962/(I908*32) ; encodeur 1
+P1012=M1062/(I1008*32) ; encodeur 2
+P1013=M1162/(I1108*32) ; encodeur 3
+P1014=M1262/(I1208*32) ; encodeur 4
+P1015=M1362/(I1308*32) ; encodeur 5
+CLOSE
+

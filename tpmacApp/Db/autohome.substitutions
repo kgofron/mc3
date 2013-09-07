@@ -1,0 +1,10 @@
+file "db/autohome.db"
+{
+pattern
+{ SYS,				    DEV,					       PLC,			PORT}
+{"XF:28ID1-OP:A",	"{Mir:VFM-Ax:YUI}",		8,				"P0"}
+{"XF:28ID1-OP:A",	"{Mir:VFM-Ax:YUO}",		8,				"P0"}
+{"XF:28ID1-OP:A",	"{Mir:VFM-Ax:YD}",		8,				"P0"}
+{"XF:28ID1-OP:A",	"{Mir:VFM-Ax:BendU}",	11,				"P0"}
+{"XF:28ID1-OP:A",	"{Mir:VFM-Ax:BendD}",	11,				"P0"}
+}

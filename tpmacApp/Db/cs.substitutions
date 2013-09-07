@@ -1,0 +1,11 @@
+file "db/motor.db"
+{
+# ADDR ---> axis #
+pattern
+{ P,                M,                    MOTOR,  ADDR,   DESC,             DTYP }
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:P}",      "CS1",  6,      "VFM Pitch",      asynMotor }
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:R}",      "CS1",  7,      "VFM Roll",       asynMotor }
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:Y}",      "CS1",  8,      "VFM Vertical",   asynMotor }
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:Bend}",   "CS2",  6,      "VFM Bend",       asynMotor }
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:Offset}", "CS2",  7,      "VFM Bend Offset",asynMotor }
+}

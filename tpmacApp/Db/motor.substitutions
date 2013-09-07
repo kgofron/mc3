@@ -1,0 +1,12 @@
+file "db/motor.db"
+{
+# ADDR ---> axis #
+pattern
+{ P,               M,                       MOTOR,         PORT,      ADDR,   DESC,                               DTYP ,      ALIAS}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:YUI}Mtr",    "M0", "P0",   1,      "VFM upstream inboard vertical",  asynMotor , ""}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:YUO}Mtr",    "M0", "P0",   2,      "VFM upstream outboard vertical",            asynMotor , ""}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:YD}Mtr",     "M0", "P0",   3,      "VFM downstream vertical", asynMotor , ""}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:BendU}Mtr",  "M0", "P0",   4,      "VFM upstream bender 1",                     asynMotor , ""}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:BendD}Mtr",  "M0", "P0",   5,      "VFM downstream bender 2",                     asynMotor , ""}
+}
+

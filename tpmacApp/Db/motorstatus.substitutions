@@ -1,0 +1,21 @@
+file "db/motorstatus.db"
+{
+pattern
+{ SYS,             	 DEV,          		   		PORT,    AXIS}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:YUI}", 	  		"P0",    1}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:YUO}", 	  		"P0",    2}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:YD}", 	  		"P0",    3}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:BendU}",   		"P0",    4}
+{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:BendD}",   		"P0",    5}
+}
+
+file "db/pmacStatusAxis.db"
+{
+pattern
+{ SYS,             	 DEV,               		PORT,    AXIS}
+{ "XF:28ID1-CT:A", "{MC:VFM-Ax:2}", 	  		"P0",    1}
+{ "XF:28ID1-CT:A", "{MC:VFM-Ax:1}", 	  		"P0",    2}
+{ "XF:28ID1-CT:A", "{MC:VFM-Ax:3}", 	  		"P0",    3}
+{ "XF:28ID1-CT:A", "{MC:VFM-Ax:4}",   			"P0",    4}
+{ "XF:28ID1-CT:A", "{MC:VFM-Ax:5}",   			"P0",    5}
+}
