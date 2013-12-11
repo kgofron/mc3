@@ -1,0 +1,10 @@
+= SRX Slits and Filter =
+== Axes ==
+[1] {Slt:1-Ax:I} - White beam slit inboard
+[2] {Slt:1-Ax:O} - White beam slit outboard
+[3] {Slt:1-Ax:T} - White beam slit top
+[4] {Slt:1-Ax:B} - White beam slit bottom
+[5] {Slt:2-Ax:I} - Pink beam slit inboard
+[6] {Slt:2-Ax:O} - Pink beam slit outboard
+[7] {Fltr:1-Ax:X} - Filter X translation 
+
