@@ -1,3 +1,8 @@
 syntax: glob
 *.swp
 *.orig
+*.56K
+*.LOG
+*.MAP
+*.PMA
+*.TBL
