@@ -1,12 +1,12 @@
 file "db/pmac_asyn_motor.template"
 {
-
-# ADDR ---> axis #
 pattern
-{ SYS,             	 DEV,               		 	MOTOR,          SPORT,    ADDR, 	DESC,     				DTYP , PREC, EGU }
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:YUI}Mtr", 	 	  "M0", "P0",    1, 	"Upstream inboard vertical", asynMotor , 1, 	"micron"}
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:YUO}Mtr", 	  	"M0", "P0",    2, 	"Upstream outboard vertical", asynMotor , 1, 	"micron"}
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:YD}Mtr", 	 	    "M0", "P0",    3, 	"Downstream vertical", asynMotor , 1, 	"micron"}
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:BendU}Mtr",   	"M0", "P0",    4, 	"Upstream bender", asynMotor , 1, 	"micron"}
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:BendD}Mtr",   	"M0", "P0",    5, 	"Downstream bender", asynMotor , 1, 	"micron"}
+{SYS,              DEV,                MOTOR,  SPORT,  ADDR,  DESC,             DTYP        PREC,  EGU}
+{"XF:05IDA-OP:1",  "{Slt:1-Ax:I}",     "M0",   "P0",   1,     "Inboard",        asynMotor,  2,     "um"}
+{"XF:05IDA-OP:1",  "{Slt:1-Ax:O}",     "M0",   "P0",   2,     "Outboard",       asynMotor,  2,     "um"}
+{"XF:05IDA-OP:1",  "{Slt:1-Ax:B}",     "M0",   "P0",   3,     "Bottom ",        asynMotor,  2,     "um"}
+{"XF:05IDA-OP:1",  "{Slt:1-Ax:T}",     "M0",   "P0",   4,     "Top",            asynMotor,  2,     "um"}
+{"XF:05IDA-OP:1",  "{Slt:2-Ax:I}",     "M0",   "P0",   5,     "Inboard",        asynMotor,  2,     "um"}
+{"XF:05IDA-OP:1",  "{Slt:2-Ax:O}",     "M0",   "P0",   6,     "Outboard",       asynMotor,  2,     "um"}
+{"XF:05IDA-OP:1",  "{Fltr:1-Ax:Y}",    "M0",   "P0",   7,     "Y Translation",  asynMotor,  2,     "um"}
 }
