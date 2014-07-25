@@ -42,9 +42,9 @@ P707 = 5000
 P708 = 5000
 
 ; Drive current & percentage for each axis
-P733 = 350025
-P734 = 50050
-P735 = 50050
+P733 = 0
+P734 = 0
+P735 = 0
 P736 = 0
 P737 = 0
 P738 = 0
