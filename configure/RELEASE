@@ -25,11 +25,6 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # now available as Debian packages
 #TPMAC=/epics/src/tpmac
 
-#MODULE=/home/wlewis/local/data/work/hg/repos
-MODULES=/epics/modules
-PMACUTIL=$(MODULES)/pmacUtil
-GENSUB=$(MODULES)/genSub
-
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/usr/lib/epics
 
