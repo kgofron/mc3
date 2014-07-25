@@ -16,11 +16,11 @@ DB += motorstatus.substitutions
 DB += pmacStatus.substitutions
 DB += pmac_asyn_motor.substitutions
 DB += asynComm.db
-DB_INSTALLS += $(PMACUTIL)/db/pmac_asyn_motor.template
-DB_INSTALLS += $(PMACUTIL)/db/motorstatus.db
-DB_INSTALLS += $(PMACUTIL)/db/pmacStatusAxis.db
-DB_INSTALLS += $(PMACUTIL)/db/pmacStatus.db
-DB_INSTALLS += $(PMACUTIL)/db/autohome.db
+DB_INSTALLS += $(EPICS_BASE)/db/pmac_asyn_motor.db
+DB_INSTALLS += $(EPICS_BASE)/db/motorstatus.db
+DB_INSTALLS += $(EPICS_BASE)/db/pmacStatusAxis.db
+DB_INSTALLS += $(EPICS_BASE)/db/pmacStatus.db
+DB_INSTALLS += $(EPICS_BASE)/db/autohome.db
 
 
 #----------------------------------------------------
