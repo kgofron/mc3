@@ -6,3 +6,12 @@ syntax: glob
 *.MAP
 *.PMA
 *.TBL
+db/
+dbd/
+O.linux-x86_64/
+O.Common/
+envPaths
+bin/
+
+syntax: regexp
+^pmc/
