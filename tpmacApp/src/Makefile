@@ -28,7 +28,6 @@ tpmac_DBD += pmacAsynCoord.dbd
 tpmac_DBD += asSupport.dbd
 tpmac_DBD += busySupport.dbd
 tpmac_DBD += calcSupport.dbd
-tpmac_DBD += genSub.dbd
 tpmac_DBD += system.dbd
 tpmac_DBD += stream.dbd
 
@@ -39,12 +38,8 @@ tpmac_LIBS += pmacAsynCoord
 tpmac_LIBS += motor
 tpmac_LIBS += asyn
 tpmac_LIBS += autosave
-tpmac_LIBS += genSub
-tpmac_LIBS += receive
-tpmac_LIBS += transmit
 tpmac_LIBS += busy
 tpmac_LIBS += calc
-tpmac_LIBS += pmacUtil
 tpmac_LIBS += stream
 
 # tpmac_registerRecordDeviceDriver.cpp derives from tpmac.dbd
