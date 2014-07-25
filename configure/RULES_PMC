@@ -1,7 +1,7 @@
-vpath %.pmc $(dir $(PMC)) $(dir $(PMC_INSTALLS)) $(dir $(PMC_TEMPLATES))
-
 TEMPLATE_DIR1 = /usr/share/epics-pmacutil-dev/pmc
 TEMPLATE_DIR2 = $(TOP)/pmc
+
+vpath %.pmc $(dir $(PMC)) $(dir $(PMC_INSTALLS)) $(dir $(PMC_TEMPLATES)) $(TEMPLATE_DIR1) $(TEMPLATE_DIR2)
 
 INSTALL_PMCS += $(addprefix $(INSTALL_PMC)/,$(notdir $(PMC)))
 INSTALL_PMC_INSTALLS += $(addprefix $(INSTALL_PMC)/,$(notdir $(PMC_INSTALLS)))
