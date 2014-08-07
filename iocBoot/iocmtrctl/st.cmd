@@ -1,10 +1,17 @@
-#!../../bin/linux-x86/tpmac
-
-## You may have to change tpmac to something else
-## everywhere it appears in this file
+#!../../bin/linux-x86_64/tpmac
 
 < envPaths
-epicsEnvSet("STREAM_PROTOCOL_PATH", ".:../protocols:$(PMACUTIL)/pmacUtilApp/protocol")
+
+epicsEnvSet("ENGINEER",  "kgofron x5283")
+epicsEnvSet("LOCATION",  "740 HXN RGA 1")
+epicsEnvSet("STREAM_PROTOCOL_PATH", ".:../protocols:$(PMACUTIL)/protocol")
+
+epicsEnvSet("P",         "XF:03IDA-OP")
+epicsEnvSet("TP_PORT",   "P0")
+epicsEnvSet("ASYN_P",    "$(P){MC:04}")
+
+epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
+epicsEnvSet("EPICS_CA_ADDR_LIST", "10.3.0.255")
 
 cd ${TOP} #/iocBoot/${IOC}
 
@@ -15,42 +22,41 @@ tpmac_registerRecordDeviceDriver(pdbbase)
 # pmacAsynIPConfigure() is a wrapper for drvAsynIPPort::drvAsynIPPortConfigure() and
 # pmacAsynIPPort::pmacAsynIPPortConfigureEos().
 # See pmacAsynIPPort.c
-pmacAsynIPConfigure("P0","xf28ida-mc-vfm:1025")
-
+pmacAsynIPConfigure("$(TP_PORT)", "xf03ida-mc4:1025")
 # WARNING: a trace-mask of containing 0x10 will TRACE_FLOW (v. noisy!!)
-#asynSetTraceMask("P0",-1,0x9)
-#asynSetTraceIOMask("P0",-1,0x2)
+#asynSetTraceMask("$(TP_PORT)",-1,0x9)
+#asynSetTraceIOMask("$(TP_PORT)",-1,0x2)
 
 # pmacAsynMotorCreate(port,addr,card,nAxes)
 # see pmacAsynMotor.c
-pmacAsynMotorCreate("P0", 0, 1, 8);
+pmacAsynMotorCreate("$(TP_PORT)", 0, 1, 8);
 
 # Setup the motor Asyn layer (port, drvet name, card, nAxes+1)
 drvAsynMotorConfigure("M0", "pmacAsynMotor", 1, 9)
 
 # Initialize the coord-system(port,addr,cs,ref,prog#)
-pmacAsynCoordCreate("P0",0,1,1,10)
-pmacAsynCoordCreate("P0",0,2,2,10)
+# pmacAsynCoordCreate("$(TP_PORT)",0,1,1,10)
+# pmacAsynCoordCreate("$(TP_PORT)",0,2,2,10)
 
 # setup the coord-sys(portName,drvel-name,ref#(from create),nAxes+1)
-drvAsynMotorConfigure("CS1","pmacAsynCoord",1,9)
-drvAsynMotorConfigure("CS2","pmacAsynCoord",2,9)
+# drvAsynMotorConfigure("CS1","pmacAsynCoord",1,9)
+# drvAsynMotorConfigure("CS2","pmacAsynCoord",2,9)
 
 # change poll rates (card, poll-period in ms)
-pmacSetMovingPollPeriod( 1, 100 )
-pmacSetIdlePollPeriod( 1, 1000 )
+pmacSetMovingPollPeriod(1, 100 )
+pmacSetIdlePollPeriod(1, 1000 )
 pmacSetCoordMovingPollPeriod(5,200)
 pmacSetCoordIdlePollPeriod(5,2000)
 
 
 ## Load record instances
 dbLoadTemplate("db/motor.substitutions")
-dbLoadTemplate("db/motor_status.substitutions")
+dbLoadTemplate("db/motorstatus.substitutions")
 dbLoadTemplate("db/pmacStatus.substitutions")
 dbLoadTemplate("db/pmac_asyn_motor.substitutions")
 dbLoadTemplate("db/autohome.substitutions")
 dbLoadTemplate("db/cs.substitutions")
-dbLoadRecords("db/asynComm.db","P=XF:28ID1-CT:A{MC:VFM},PORT=P0,ADDR=0")
+dbLoadRecords("db/asynComm.db","P=$(ASYN_P),PORT=$(TP_PORT),ADDR=0")
 
 ## autosave/restore machinery
 save_restoreSet_Debug(0)

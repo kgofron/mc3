@@ -27,6 +27,7 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/usr/lib/epics
+PMACUTIL=/usr/share/epics-pmacutil-dev
 
 #Capfast users may need the following definitions
 #CAPFAST_TEMPLATES=

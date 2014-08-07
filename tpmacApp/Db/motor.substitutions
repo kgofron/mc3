@@ -1,12 +1,13 @@
 file "db/motor.db"
 {
 pattern
-{P,                M,                  MOTOR,  PORT,  ADDR,  DESC,             DTYP,      MRES,  EGU,  PREC,  ALIAS }
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:I}Mtr",  "M0",   "P0",  1,     "Inboard",        asynMotor, 0,     "um", 2,     ""    }
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:O}Mtr",  "M0",   "P0",  2,     "Outboard",       asynMotor, 0,     "um", 2,     ""    }
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:B}Mtr",  "M0",   "P0",  3,     "Bottom ",        asynMotor, 0,     "um", 2,     ""    }
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:T}Mtr",  "M0",   "P0",  4,     "Top",            asynMotor, 0,     "um", 2,     ""    }
-{"XF:05IDA-OP:1",  "{Slt:2-Ax:I}Mtr",  "M0",   "P0",  5,     "Inboard",        asynMotor, 0,     "um", 2,     ""    }
-{"XF:05IDA-OP:1",  "{Slt:2-Ax:O}Mtr",  "M0",   "P0",  6,     "Outboard",       asynMotor, 0,     "um", 2,     ""    }
-{"XF:05IDA-OP:1",  "{Fltr:1-Ax:Y}Mtr", "M0",   "P0",  7,     "Y Translation",  asynMotor, 0,     "um", 2,     ""    }
+{P,              M,                 MOTOR,  PORT,  ADDR,  DESC,             DTYP,      MRES,      EGU,  PREC,  ALIAS }
+{"XF:03IDA-OP",  "{BPM:1-Ax:X}Mtr", "M0",   "P0",  1,     "X Translation",  asynMotor, 0.0001,    "mm", 7,     ""    }
+{"XF:03IDA-OP",  "{BPM:1-Ax:Y}Mtr", "M0",   "P0",  2,     "Y Translation",  asynMotor, 0.0001,    "mm", 7,     ""    }
+{"XF:03IDA-OP",  "{BPM:2-Ax:Y}Mtr", "M0",   "P0",  3,     "Diode array",    asynMotor, 0.0001,    "mm", 7,     ""    }
+{"XF:03IDA-OP",  "{BPM:2-Ax:X}Mtr", "M0",   "P0",  4,     "Lateral",        asynMotor, 0.0001,    "mm", 7,     ""    }
+{"XF:03IDA-OP",  "{BPM:3-Ax:Y}Mtr", "M0",   "P0",  5,     "X Translation",  asynMotor, 0.00015625, "mm", 9,     ""    }
+{"XF:03IDA-OP",  "{FS:1-Ax:Y}Mtr",  "M0",   "P0",  6,     "Y Translation",  asynMotor, 1.5625e-05, "mm", 9,     ""    }
+{"XF:03IDA-OP",  "{BPM:4-Ax:Y}Mtr", "M0",   "P0",  7,     "Y Translation",  asynMotor, 0.00015625, "mm", 7,     ""    }
+{"XF:03IDA-OP",  "{FS:2-Ax:Y}Mtr",  "M0",   "P0",  8,     "Y Translation",  asynMotor, 0.00015625, "mm", 9,     ""    }
 }

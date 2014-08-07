@@ -1,4 +1,4 @@
-NAME=ioc-mc-vfm
-USER=xf-28ida-mc-vfm
-PORT=4050
-HOST=xf-28ida-ioc-1
+NAME=mc4
+USER=softioc
+PORT=4004
+HOST=xf03ida-ioc1

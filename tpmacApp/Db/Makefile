@@ -15,6 +15,7 @@ DB += motor.substitutions
 DB += motorstatus.substitutions
 DB += pmacStatus.substitutions
 DB += pmac_asyn_motor.substitutions
+DB += autohome.substitutions
 DB += asynComm.db
 DB_INSTALLS += $(EPICS_BASE)/db/pmac_asyn_motor.db
 DB_INSTALLS += $(EPICS_BASE)/db/motorstatus.db

@@ -1,25 +1,27 @@
 file "db/motorstatus.db"
 {
 pattern
-{SYS,              DEV,                PORT,  AXIS }
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:I}",     "P0",  1    }
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:O}",     "P0",  2    }
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:B}",     "P0",  3    }
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:T}",     "P0",  4    }
-{"XF:05IDA-OP:1",  "{Slt:2-Ax:I}",     "P0",  5    }
-{"XF:05IDA-OP:1",  "{Slt:2-Ax:O}",     "P0",  6    }
-{"XF:05IDA-OP:1",  "{Fltr:1-Ax:Y}",    "P0",  7    }
+{SYS,            DEV,               PORT,  AXIS }
+{"XF:03IDA-OP",  "{BPM:1-Ax:X}",    "P0",  1    }
+{"XF:03IDA-OP",  "{BPM:1-Ax:Y}",    "P0",  2    }
+{"XF:03IDA-OP",  "{BPM:2-Ax:Y}",    "P0",  3    }
+{"XF:03IDA-OP",  "{BPM:2-Ax:X}",    "P0",  4    }
+{"XF:03IDA-OP",  "{BPM:3-Ax:Y}",    "P0",  5    }
+{"XF:03IDA-OP",  "{FS:1-Ax:Y}",     "P0",  6    }
+{"XF:03IDA-OP",  "{BPM:4-Ax:Y}",    "P0",  7    }
+{"XF:03IDA-OP",  "{FS:2-Ax:Y}",     "P0",  8    }
 }
 
 file "db/pmacStatusAxis.db"
 {
 pattern
-{SYS,               DEV,           PORT,  AXIS }
-{"XF:05IDA-CT",     "{MC:1-Ax:1}", "P0",  1    }
-{"XF:05IDA-CT",     "{MC:1-Ax:2}", "P0",  2    }
-{"XF:05IDA-CT",     "{MC:1-Ax:3}", "P0",  3    }
-{"XF:05IDA-CT",     "{MC:1-Ax:4}", "P0",  4    }
-{"XF:05IDA-CT",     "{MC:1-Ax:5}", "P0",  5    }
-{"XF:05IDA-CT",     "{MC:1-Ax:6}", "P0",  6    }
-{"XF:05IDA-CT",     "{MC:1-Ax:7}", "P0",  7    }
+{SYS,             DEV,           PORT,  AXIS }
+{"XF:03IDA-CT",   "{MC:4-Ax:1}", "P0",  1    }
+{"XF:03IDA-CT",   "{MC:4-Ax:2}", "P0",  2    }
+{"XF:03IDA-CT",   "{MC:4-Ax:3}", "P0",  3    }
+{"XF:03IDA-CT",   "{MC:4-Ax:4}", "P0",  4    }
+{"XF:03IDA-CT",   "{MC:4-Ax:5}", "P0",  5    }
+{"XF:03IDA-CT",   "{MC:4-Ax:6}", "P0",  6    }
+{"XF:03IDA-CT",   "{MC:4-Ax:7}", "P0",  7    }
+{"XF:03IDA-CT",   "{MC:4-Ax:8}", "P0",  8    }
 }

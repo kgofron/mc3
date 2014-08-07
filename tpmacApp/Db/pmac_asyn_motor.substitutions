@@ -1,12 +1,13 @@
-file "db/pmac_asyn_motor.template"
+file "db/pmac_asyn_motor.db"
 {
 pattern
-{SYS,              DEV,                MOTOR,  SPORT,  ADDR,  DESC,             DTYP        PREC,  EGU}
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:I}",     "M0",   "P0",   1,     "Inboard",        asynMotor,  2,     "um"}
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:O}",     "M0",   "P0",   2,     "Outboard",       asynMotor,  2,     "um"}
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:B}",     "M0",   "P0",   3,     "Bottom ",        asynMotor,  2,     "um"}
-{"XF:05IDA-OP:1",  "{Slt:1-Ax:T}",     "M0",   "P0",   4,     "Top",            asynMotor,  2,     "um"}
-{"XF:05IDA-OP:1",  "{Slt:2-Ax:I}",     "M0",   "P0",   5,     "Inboard",        asynMotor,  2,     "um"}
-{"XF:05IDA-OP:1",  "{Slt:2-Ax:O}",     "M0",   "P0",   6,     "Outboard",       asynMotor,  2,     "um"}
-{"XF:05IDA-OP:1",  "{Fltr:1-Ax:Y}",    "M0",   "P0",   7,     "Y Translation",  asynMotor,  2,     "um"}
+{SYS,            DEV,               MOTOR,  SPORT,  ADDR,  DESC,             DTYP        PREC,  EGU}
+{"XF:03IDA-OP",  "{BPM:1-Ax:X}",    "M0",   "P0",   1,     "X Translation",  asynMotor,  7,     "mm"}
+{"XF:03IDA-OP",  "{BPM:1-Ax:Y}",    "M0",   "P0",   2,     "Y Translation",  asynMotor,  7,     "mm"}
+{"XF:03IDA-OP",  "{BPM:2-Ax:Y}",    "M0",   "P0",   3,     "Diode array",    asynMotor,  7,     "mm"}
+{"XF:03IDA-OP",  "{BPM:2-Ax:X}",    "M0",   "P0",   4,     "Lateral",        asynMotor,  7,     "mm"}
+{"XF:03IDA-OP",  "{BPM:3-Ax:Y}",    "M0",   "P0",   5,     "X Translation",  asynMotor,  9,     "mm"}
+{"XF:03IDA-OP",  "{FS:1-Ax:Y}",     "M0",   "P0",   6,     "Y Translation",  asynMotor,  9,     "mm"}
+{"XF:03IDA-OP",  "{BPM:4-Ax:Y}",    "M0",   "P0",   7,     "Y Translation",  asynMotor,  7,     "mm"}
+{"XF:03IDA-OP",  "{FS:2-Ax:Y}",     "M0",   "P0",   8,     "Y Translation",  asynMotor,  9,     "mm"}
 }
