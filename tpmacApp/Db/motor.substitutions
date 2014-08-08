@@ -1,13 +1,10 @@
 file "db/motor.db"
 {
 pattern
-{P,              M,                 MOTOR,  PORT,  ADDR,  DESC,             DTYP,      MRES,      EGU,  PREC,  ALIAS }
-{"XF:03IDA-OP",  "{BPM:1-Ax:X}Mtr", "M0",   "P0",  1,     "X Translation",  asynMotor, 0.0001,    "mm", 7,     ""    }
-{"XF:03IDA-OP",  "{BPM:1-Ax:Y}Mtr", "M0",   "P0",  2,     "Y Translation",  asynMotor, 0.0001,    "mm", 7,     ""    }
-{"XF:03IDA-OP",  "{BPM:2-Ax:Y}Mtr", "M0",   "P0",  3,     "Diode array",    asynMotor, 0.0001,    "mm", 7,     ""    }
-{"XF:03IDA-OP",  "{BPM:2-Ax:X}Mtr", "M0",   "P0",  4,     "Lateral",        asynMotor, 0.0001,    "mm", 7,     ""    }
-{"XF:03IDA-OP",  "{BPM:3-Ax:Y}Mtr", "M0",   "P0",  5,     "X Translation",  asynMotor, 0.00015625, "mm", 9,     ""    }
-{"XF:03IDA-OP",  "{FS:1-Ax:Y}Mtr",  "M0",   "P0",  6,     "Y Translation",  asynMotor, 1.5625e-05, "mm", 9,     ""    }
-{"XF:03IDA-OP",  "{BPM:4-Ax:Y}Mtr", "M0",   "P0",  7,     "Y Translation",  asynMotor, 0.00015625, "mm", 7,     ""    }
-{"XF:03IDA-OP",  "{FS:2-Ax:Y}Mtr",  "M0",   "P0",  8,     "Y Translation",  asynMotor, 0.00015625, "mm", 9,     ""    }
+{P,              M,                    MOTOR,  PORT,  ADDR,  DESC,             DTYP,      MRES,      EGU,  PREC,  ALIAS }
+{"XF:03IDA-OP",  "{Fltr:1-Ax:Y}Mtr",   "M0",   "P0",  1,     "Y Translation",  asynMotor, 0.0001,    "mm", 7,     ""    }
+{"XF:03IDA-OP",  "{Fltr:2-Ax:Y}Mtr",   "M0",   "P0",  2,     "Y Translation",  asynMotor, 0.0001,    "mm", 7,     ""    }
+{"XF:03IDA-OP",  "{Lens:CRL-Ax:X}Mtr", "M0",   "P0",  3,     "X Translation",  asynMotor, 0.0001,    "mm", 7,     ""    }
+{"XF:03IDA-OP",  "{Lens:CRL-Ax:Y}Mtr", "M0",   "P0",  4,     "Y Translation",  asynMotor, 0.0001,    "mm", 7,     ""    }
+{"XF:03IDA-OP",  "{Lens:CRL-Ax:P}Mtr", "M0",   "P0",  5,     "Pitch",          asynMotor, 0.00017986, "deg", 1,     ""    }
 }
