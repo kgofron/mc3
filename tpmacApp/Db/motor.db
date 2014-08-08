@@ -9,7 +9,7 @@ record(motor,"$(P)$(M)")
     field(RDBD,$(MRES="1"))
     field(MRES,$(MRES="1"))
     field(ERES,$(MRES="1"))
-    field(EGU,$(EGU="None"))
+    field(EGU,"$(EGU="None")")
     field(PREC,$(PREC="6"))
 
     info(autosaveFields_pass0, "DVAL DIR DHLM DLLM TWV SREV MRES ERES RRES VBAS VELO VMAX ACCL BDST BVEL BACC RDBD DESC EGU RTRY UEIP URIP DLY RDBL PREC DISA DISP FOFF OFF FRAC OMSL JVEL JAR PCOF ICOF DCOF HVEL NTM NTMF")
