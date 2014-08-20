@@ -9,6 +9,7 @@ epicsEnvSet("STREAM_PROTOCOL_PATH", ".:../protocols:$(PMACUTIL)/protocol")
 epicsEnvSet("P",         "XF:03IDA-OP")
 epicsEnvSet("TP_PORT",   "P0")
 epicsEnvSet("ASYN_P",    "$(P){MC:05}")
+epicsEnvSet("IOC_PREFIX", "$(P){IOC:$(IOC)}")
 
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
 epicsEnvSet("EPICS_CA_ADDR_LIST", "10.3.0.255")
@@ -69,6 +70,11 @@ set_requestfile_path("${TOP}/as","/req")
 set_pass0_restoreFile("info_positions.sav")
 set_pass0_restoreFile("info_settings.sav")
 set_pass1_restoreFile("info_settings.sav")
+
+dbLoadRecords("db/save_restoreStatus.db","P=$(IOC_PREFIX)")
+dbLoadRecords("db/iocAdminSoft.db","IOC=$(IOC_PREFIX)")
+save_restoreSet_status_prefix("$(IOC_PREFIX)")
+#asSetFilename("/cf-update/acf/default.acf")
 
 iocInit()
 
