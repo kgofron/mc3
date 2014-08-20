@@ -71,8 +71,8 @@ set_pass0_restoreFile("info_positions.sav")
 set_pass0_restoreFile("info_settings.sav")
 set_pass1_restoreFile("info_settings.sav")
 
-dbLoadRecords("db/save_restoreStatus.db","P=$(IOC_PREFIX)")
-dbLoadRecords("db/iocAdminSoft.db","IOC=$(IOC_PREFIX)")
+dbLoadRecords("$(EPICS_BASE)/db/save_restoreStatus.db","P=$(IOC_PREFIX)")
+dbLoadRecords("$(EPICS_BASE)/db/iocAdminSoft.db","IOC=$(IOC_PREFIX)")
 save_restoreSet_status_prefix("$(IOC_PREFIX)")
 #asSetFilename("/cf-update/acf/default.acf")
 
