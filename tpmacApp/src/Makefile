@@ -18,6 +18,12 @@ DBD += tpmac.dbd
 tpmac_DBD += base.dbd
 
 # Include dbd files from all support applications:
+#tpmac_DBD += system.dbd
+tpmac_DBD += devIocStats.dbd
+tpmac_DBD += caPutLog.dbd
+
+
+# Include dbd files from all support applications:
 tpmac_DBD += asyn.dbd
 tpmac_DBD += motorSupport.dbd
 tpmac_DBD += drvAsynIPPort.dbd
@@ -30,6 +36,10 @@ tpmac_DBD += busySupport.dbd
 tpmac_DBD += calcSupport.dbd
 tpmac_DBD += system.dbd
 tpmac_DBD += stream.dbd
+
+# Add all the support libraries needed by this IOC
+tpmac_LIBS += devIocStats
+tpmac_LIBS += caPutLog
 
 # Add all the support libraries needed by this IOC
 tpmac_LIBS += pmacAsynMotor
