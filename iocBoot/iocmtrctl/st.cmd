@@ -8,13 +8,12 @@ epicsEnvSet("STREAM_PROTOCOL_PATH", ".:../protocols:$(PMACUTIL)/protocol")
 
 epicsEnvSet("P",         "XF:03IDA-OP")
 epicsEnvSet("TP_PORT",   "P0")
-epicsEnvSet("ASYN_P",    "$(P){MC:05}")
-epicsEnvSet("IOC_PREFIX", "$(P){IOC:$(IOC)}")
+epicsEnvSet("IOC_PREFIX", "$(P){IOC:$(IOCNAME)}")
 
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
 epicsEnvSet("EPICS_CA_ADDR_LIST", "10.3.0.255")
 
-cd ${TOP} #/iocBoot/${IOC}
+cd ${TOP}
 
 ## Register all support components
 dbLoadDatabase("dbd/tpmac.dbd",0,0)
@@ -44,8 +43,8 @@ drvAsynMotorConfigure("M0", "pmacAsynMotor", 1, 9)
 # drvAsynMotorConfigure("CS2","pmacAsynCoord",2,9)
 
 # change poll rates (card, poll-period in ms)
-pmacSetMovingPollPeriod(1, 100 )
-pmacSetIdlePollPeriod(1, 1000 )
+pmacSetMovingPollPeriod(1, 100)
+pmacSetIdlePollPeriod(1, 1000)
 pmacSetCoordMovingPollPeriod(5,200)
 pmacSetCoordIdlePollPeriod(5,2000)
 
@@ -57,7 +56,7 @@ dbLoadTemplate("db/pmacStatus.substitutions")
 dbLoadTemplate("db/pmac_asyn_motor.substitutions")
 dbLoadTemplate("db/autohome.substitutions")
 dbLoadTemplate("db/cs.substitutions")
-dbLoadRecords("db/asynComm.db","P=$(ASYN_P),PORT=$(TP_PORT),ADDR=0")
+dbLoadRecords("db/asynComm.db","P=$(IOC_PREFIX),PORT=$(TP_PORT),ADDR=0")
 
 ## autosave/restore machinery
 save_restoreSet_Debug(0)
@@ -66,6 +65,9 @@ save_restoreSet_DatedBackupFiles(1)
 
 set_savefile_path("${TOP}/as","/save")
 set_requestfile_path("${TOP}/as","/req")
+
+system("install -m 777 -d ${TOP}/as/save")
+system("install -m 777 -d ${TOP}/as/req")
 
 set_pass0_restoreFile("info_positions.sav")
 set_pass0_restoreFile("info_settings.sav")
@@ -77,6 +79,8 @@ save_restoreSet_status_prefix("$(IOC_PREFIX)")
 #asSetFilename("/cf-update/acf/default.acf")
 
 iocInit()
+
+# caPutLogInit("ioclog.cs.nsls2.local:7004", 1)
 
 ## more autosave/restore machinery
 cd ${TOP}/as/req
