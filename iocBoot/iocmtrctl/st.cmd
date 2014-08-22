@@ -8,6 +8,7 @@ epicsEnvSet("STREAM_PROTOCOL_PATH", ".:../protocols:$(PMACUTIL)/protocol")
 
 epicsEnvSet("P",         "XF:03IDA-OP")
 epicsEnvSet("TP_PORT",   "P0")
+# epicsEnvSet("IOCNAME",   "mc2")
 epicsEnvSet("IOC_PREFIX", "$(P){IOC:$(IOCNAME)}")
 
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")

@@ -1,10 +1,13 @@
 file "db/pmac_asyn_motor.db"
 {
 pattern
-{SYS,            DEV,                  MOTOR,  SPORT,  ADDR,  DESC,             DTYP        PREC,  EGU}
-{"XF:03IDA-OP",  "{Fltr:1-Ax:Y}",      "M0",   "P0",   1,     "Y Translation",  asynMotor,  7,     "mm"}
-{"XF:03IDA-OP",  "{Fltr:2-Ax:Y}",      "M0",   "P0",   2,     "Y Translation",  asynMotor,  7,     "mm"}
-{"XF:03IDA-OP",  "{Lens:CRL-Ax:X}",    "M0",   "P0",   3,     "X Translation",  asynMotor,  7,     "mm"}
-{"XF:03IDA-OP",  "{Lens:CRL-Ax:Y}",    "M0",   "P0",   4,     "Y Translation",  asynMotor,  7,     "mm"}
-{"XF:03IDA-OP",  "{Lens:CRL-Ax:P}",    "M0",   "P0",   5,     "Pitch",          asynMotor,  1,     "deg"}
+{SYS,            DEV,                  MOTOR,  SPORT,  ADDR,  DESC,             DTYP        PREC,  EGU    }
+{"XF:03IDA-OP",  "{Mir:1-Ax:X}",       "M0",   "P0",   1,     "X Translation",  asynMotor,  7,     "mm"   }
+{"XF:03IDA-OP",  "{Mir:1-Ax:Y}",       "M0",   "P0",   2,     "Y Translation",  asynMotor,  7,     "mm"   }
+{"XF:03IDA-OP",  "{Mir:1-Ax:P}",       "M0",   "P0",   3,     "Pitch flexure",  asynMotor,  9,     "mrad" }
+{"XF:03IDA-OP",  "{Mir:1-Ax:Bend}",    "M0",   "P0",   4,     "Bender",         asynMotor,  1,     "1/2 ct"}
+{"XF:03IDA-OP",  "{Mir:2-Ax:X}",       "M0",   "P0",   5,     "X Translation",  asynMotor,  7,     "mm"   }
+{"XF:03IDA-OP",  "{Mir:2-Ax:Y}",       "M0",   "P0",   6,     "Y Translation",  asynMotor,  7,     "mm"   }
+{"XF:03IDA-OP",  "{Mir:2-Ax:P}",       "M0",   "P0",   7,     "Pitch flexure",  asynMotor,  9,     "mrad" }
+{"XF:03IDA-OP",  "{Mir:2-Ax:Bend}",    "M0",   "P0",   8,     "Bender",         asynMotor,  1,     "1/2 ct."}
 }

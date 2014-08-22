@@ -2,9 +2,12 @@ file "db/autohome.db"
 {
 pattern
 {SYS,            DEV,                  PLC,  PORT  }
-{"XF:03IDA-OP",  "{Fltr:1-Ax:Y}",      8,    P0    }
-{"XF:03IDA-OP",  "{Fltr:2-Ax:Y}",      9,    P0    }
-{"XF:03IDA-OP",  "{Lens:CRL-Ax:X}",    10,   P0    }
-{"XF:03IDA-OP",  "{Lens:CRL-Ax:Y}",    11,   P0    }
-{"XF:03IDA-OP",  "{Lens:CRL-Ax:P}",    12,   P0    }
+{"XF:03IDA-OP",  "{Mir:1-Ax:X}",       8,    P0    }
+{"XF:03IDA-OP",  "{Mir:1-Ax:Y}",       9,    P0    }
+{"XF:03IDA-OP",  "{Mir:1-Ax:P}",       10,   P0    }
+{"XF:03IDA-OP",  "{Mir:1-Ax:Bend}",    11,   P0    }
+{"XF:03IDA-OP",  "{Mir:2-Ax:X}",       12,   P0    }
+{"XF:03IDA-OP",  "{Mir:2-Ax:Y}",       13,   P0    }
+{"XF:03IDA-OP",  "{Mir:2-Ax:P}",       14,   P0    }
+{"XF:03IDA-OP",  "{Mir:2-Ax:Bend}",    15,   P0    }
 }
