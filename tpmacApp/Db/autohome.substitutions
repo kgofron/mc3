@@ -1,13 +1,6 @@
 file "db/autohome.db"
 {
 pattern
-{SYS,            DEV,                  PLC,  PORT  }
-{"XF:03IDA-OP",  "{Mir:1-Ax:X}",       8,    P0    }
-{"XF:03IDA-OP",  "{Mir:1-Ax:Y}",       9,    P0    }
-{"XF:03IDA-OP",  "{Mir:1-Ax:P}",       10,   P0    }
-{"XF:03IDA-OP",  "{Mir:1-Ax:Bend}",    11,   P0    }
-{"XF:03IDA-OP",  "{Mir:2-Ax:X}",       12,   P0    }
-{"XF:03IDA-OP",  "{Mir:2-Ax:Y}",       13,   P0    }
-{"XF:03IDA-OP",  "{Mir:2-Ax:P}",       14,   P0    }
-{"XF:03IDA-OP",  "{Mir:2-Ax:Bend}",    15,   P0    }
+{SYS,            DEV,               PLC,  PORT  }
+{"XF:03IDB-OP",  "{BPM:7-Ax:Y}",    8,    P0    }
 }
