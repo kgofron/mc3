@@ -8,7 +8,7 @@ epicsEnvSet("STREAM_PROTOCOL_PATH", ".:../protocols:$(PMACUTIL)/protocol")
 
 epicsEnvSet("P",         "XF:03IDC-OP")
 epicsEnvSet("TP_PORT",   "P0")
-# epicsEnvSet("IOCNAME",   "mc10")
+# epicsEnvSet("IOCNAME",   "mc16")
 epicsEnvSet("IOC_PREFIX", "$(P){IOC:$(IOCNAME)}")
 
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
@@ -23,7 +23,7 @@ tpmac_registerRecordDeviceDriver(pdbbase)
 # pmacAsynIPConfigure() is a wrapper for drvAsynIPPort::drvAsynIPPortConfigure() and
 # pmacAsynIPPort::pmacAsynIPPortConfigureEos().
 # See pmacAsynIPPort.c
-pmacAsynIPConfigure("$(TP_PORT)", "xf03idc-mc10:1025")
+pmacAsynIPConfigure("$(TP_PORT)", "xf03idc-mc16:1025")
 # WARNING: a trace-mask of containing 0x10 will TRACE_FLOW (v. noisy!!)
 #asynSetTraceMask("$(TP_PORT)",-1,0x9)
 #asynSetTraceIOMask("$(TP_PORT)",-1,0x2)
