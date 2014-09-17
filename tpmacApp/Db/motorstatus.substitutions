@@ -1,13 +1,27 @@
 file "db/motorstatus.db"
 {
 pattern
-{SYS,            DEV,               PORT,  AXIS }
-{"XF:03IDB-OP",  "{BPM:7-Ax:Y}",    "P0",  1    }
+{SYS,            DEV,                  PORT,  AXIS }
+{"XF:03IDC-OP",  "{Det:Vort-Ax:X}",    "P0",  1    }
+{"XF:03IDC-OP",  "{Det:Vort-Ax:Y}",    "P0",  2    }
+{"XF:03IDC-OP",  "{Det:Vort-Ax:Z}",    "P0",  3    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:X}",    "P0",  4    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:Y}",    "P0",  5    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:Z}",    "P0",  6    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:7}",    "P0",  7    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:8}",    "P0",  8    }
 }
 
 file "db/pmacStatusAxis.db"
 {
 pattern
 {SYS,             DEV,            PORT,  AXIS }
-{"XF:03IDB-CT",   "{MC:10-Ax:1}", "P0",  1    }
+{"XF:03IDC-CT",   "{MC:16-Ax:1}", "P0",  1    }
+{"XF:03IDC-CT",   "{MC:16-Ax:2}", "P0",  2    }
+{"XF:03IDC-CT",   "{MC:16-Ax:3}", "P0",  3    }
+{"XF:03IDC-CT",   "{MC:16-Ax:4}", "P0",  4    }
+{"XF:03IDC-CT",   "{MC:16-Ax:5}", "P0",  5    }
+{"XF:03IDC-CT",   "{MC:16-Ax:6}", "P0",  6    }
+{"XF:03IDC-CT",   "{MC:16-Ax:7}", "P0",  7    }
+{"XF:03IDC-CT",   "{MC:16-Ax:8}", "P0",  8    }
 }

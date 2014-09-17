@@ -1,6 +1,13 @@
 file "db/motor.db"
 {
 pattern
-{P,              M,                 MOTOR,  PORT,  ADDR,  DESC,             DTYP,      MRES,      EGU,  PREC,  ALIAS }
-{"XF:03IDB-OP",  "{BPM:7-Ax:Y}Mtr", "M0",   "P0",  1,     "Y Translation",  asynMotor, 0.00015625, "mm", 9,     ""    }
+{P,              M,                    MOTOR,  PORT,  ADDR,  DESC,  DTYP,      MRES,  EGU,  PREC,  ALIAS }
+{"XF:03IDC-OP",  "{Det:Vort-Ax:X}Mtr", "M0",   "P0",  1,     "X",   asynMotor, 0.0001, "mm", 7,     ""    }
+{"XF:03IDC-OP",  "{Det:Vort-Ax:Y}Mtr", "M0",   "P0",  2,     "Y",   asynMotor, 0.0001, "mm", 7,     ""    }
+{"XF:03IDC-OP",  "{Det:Vort-Ax:Z}Mtr", "M0",   "P0",  3,     "Z",   asynMotor, 0.0001, "mm", 7,     ""    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:X}Mtr", "M0",   "P0",  4,     "X",   asynMotor, 0.0001, "mm", 7,     ""    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:Y}Mtr", "M0",   "P0",  5,     "Y",   asynMotor, 0.0001, "mm", 7,     ""    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:Z}Mtr", "M0",   "P0",  6,     "Z",   asynMotor, 0.0001, "mm", 7,     ""    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:7}Mtr", "M0",   "P0",  7,     "7",   asynMotor, 0.0001, "mm", 7,     ""    }
+{"XF:03IDC-OP",  "{Det:Bruk-Ax:8}Mtr", "M0",   "P0",  8,     "8",   asynMotor, 0.0001, "mm", 7,     ""    }
 }
