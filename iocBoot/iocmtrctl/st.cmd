@@ -23,7 +23,7 @@ tpmac_registerRecordDeviceDriver(pdbbase)
 # pmacAsynIPConfigure() is a wrapper for drvAsynIPPort::drvAsynIPPortConfigure() and
 # pmacAsynIPPort::pmacAsynIPPortConfigureEos().
 # See pmacAsynIPPort.c
-pmacAsynIPConfigure("$(TP_PORT)", "xf10idd-mc9:1025")
+pmacAsynIPConfigure("$(TP_PORT)", "xf10idd-mc1:1025")
 # WARNING: a trace-mask of containing 0x10 will TRACE_FLOW (v. noisy!!)
 #asynSetTraceMask("$(TP_PORT)",-1,0x9)
 #asynSetTraceIOMask("$(TP_PORT)",-1,0x2)
