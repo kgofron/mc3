@@ -1,13 +1,13 @@
 file "db/autohome.db"
 {
 pattern
-{SYS,            DEV,                  PLC,  PORT  }
-{"XF:03IDC-OP",  "{Det:Vort-Ax:X}",    8,    P0    }
-{"XF:03IDC-OP",  "{Det:Vort-Ax:Y}",    9,    P0    }
-{"XF:03IDC-OP",  "{Det:Vort-Ax:Z}",    10,   P0    }
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:X}",    11,   P0    }
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:Y}",    12,   P0    }
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:Z}",    13,   P0    }
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:7}",    14,   P0    }
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:8}",    15,   P0    }
+{SYS,            DEV,                PLC,  PORT  }
+{"XF:10IDD-OP",  "{VFM:1-Ax:UX}",    8,    P0    }
+{"XF:10IDD-OP",  "{VFM:1-Ax:UY}",    9,    P0    }
+{"XF:10IDD-OP",  "{VFM:1-Ax:DX}",    10,   P0    }
+{"XF:10IDD-OP",  "{VFM:1-Ax:DY}",    11,   P0    }
+{"XF:10IDD-OP",  "{VFM:1-Ax:UB}",    12,   P0    }
+{"XF:10IDD-OP",  "{VFM:1-Ax:DB}",    13,   P0    }
+{"XF:10IDD-OP",  "{Slt:5-Ax:O}",     14,   P0    }
+{"XF:10IDD-OP",  "{Slt:5-Ax:I}",     15,   P0    }
 }
