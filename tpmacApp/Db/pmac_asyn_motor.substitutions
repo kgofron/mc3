@@ -1,13 +1,13 @@
 file "db/pmac_asyn_motor.db"
 {
 pattern
-{SYS,            DEV,                  MOTOR,  SPORT,  ADDR,  DESC, DTYP        PREC,  EGU}
-{"XF:03IDC-OP",  "{Det:Vort-Ax:X}",    "M0",   "P0",   1,     "X",  asynMotor,  7,     "mm"}
-{"XF:03IDC-OP",  "{Det:Vort-Ax:Y}",    "M0",   "P0",   2,     "Y",  asynMotor,  7,     "mm"}
-{"XF:03IDC-OP",  "{Det:Vort-Ax:Z}",    "M0",   "P0",   3,     "Z",  asynMotor,  7,     "mm"}
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:X}",    "M0",   "P0",   4,     "X",  asynMotor,  7,     "mm"}
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:Y}",    "M0",   "P0",   5,     "Y",  asynMotor,  7,     "mm"}
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:Z}",    "M0",   "P0",   6,     "Z",  asynMotor,  7,     "mm"}
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:7}",    "M0",   "P0",   7,     "7",  asynMotor,  7,     "mm"}
-{"XF:03IDC-OP",  "{Det:Bruk-Ax:8}",    "M0",   "P0",   8,     "8",  asynMotor,  7,     "mm"}
+{SYS,            DEV,                MOTOR,  SPORT,  ADDR,  DESC,       DTYP        PREC,  EGU}
+{"XF:10IDD-OP",  "{VFM:1-Ax:UX}",    "M0",   "P0",   1,     "US-X",     asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{VFM:1-Ax:UY}",    "M0",   "P0",   2,     "US-Y",     asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{VFM:1-Ax:DX}",    "M0",   "P0",   3,     "DS-X",     asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{VFM:1-Ax:DY}",    "M0",   "P0",   4,     "DS-Y",     asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{VFM:1-Ax:UB}",    "M0",   "P0",   5,     "US-Bend",  asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{VFM:1-Ax:DB}",    "M0",   "P0",   6,     "DS-Bend",  asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{Slt:5-Ax:O}",     "M0",   "P0",   7,     "X OB",     asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{Slt:5-Ax:I}",     "M0",   "P0",   8,     "X IB",     asynMotor,  3,     "mm"}
 }

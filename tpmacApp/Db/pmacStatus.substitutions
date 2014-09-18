@@ -2,5 +2,5 @@ file "db/pmacStatus.db"
 {
 pattern
 {SYS,             PMAC,    VERSION  PLC  PORT,  NAXES }
-{"XF:03IDC-CT",   "MC:16", "1"      5    "P0",  8     }
+{"XF:10IDD-CT",   "MC:9",  "1"      5    "P0",  8     }
 }
