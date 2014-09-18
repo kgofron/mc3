@@ -1,4 +1,4 @@
-NAME=mc16
+NAME=mc1
 USER=softioc
-PORT=40016
-HOST=xf03idc-ioc1
+PORT=4009
+HOST=xf10idd-ioc1
