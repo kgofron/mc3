@@ -1,15 +1,15 @@
 file "db/motorstatus.db"
 {
 pattern
-{SYS,            DEV,                     PORT,  AXIS }
-{"XF:10IDB-OP",  "{Mon:HRM:1-Ax:UTI}",    "P0",  1    }
-{"XF:10IDB-OP",  "{Mon:HRM:1-Ax:UTO}",    "P0",  2    }
-{"XF:10IDB-OP",  "{Mon:HRM:1-Ax:UC}",     "P0",  3    }
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:DTI}",    "P0",  4    }
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:DTO}",    "P0",  5    }
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:DC}",     "P0",  6    }
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:7}",      "P0",  7    }
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:8}",      "P0",  8    }
+{SYS,            DEV,                    PORT,  AXIS }
+{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UTI}",    "P0",  1    }
+{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UTO}",    "P0",  2    }
+{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UC}",     "P0",  3    }
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DTI}",    "P0",  4    }
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DTO}",    "P0",  5    }
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DC}",     "P0",  6    }
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:7}",      "P0",  7    }
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:8}",      "P0",  8    }
 }
 
 file "db/pmacStatusAxis.db"

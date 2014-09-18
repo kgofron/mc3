@@ -1,13 +1,13 @@
 file "db/pmac_asyn_motor.db"
 {
 pattern
-{SYS,            DEV,                     MOTOR,  SPORT,  ADDR,  DESC,                         DTYP        PREC,  EGU}
-{"XF:10IDB-OP",  "{Mon:HRM:1-Ax:UTI}",    "M0",   "P0",   1,     "US-B-Theta-Inner-Flexure",   asynMotor,  3,     "mm"}
-{"XF:10IDB-OP",  "{Mon:HRM:1-Ax:UTO}",    "M0",   "P0",   2,     "US-AB-Theta-Outer-Flexure",  asynMotor,  3,     "mm"}
-{"XF:10IDB-OP",  "{Mon:HRM:1-Ax:UC}",     "M0",   "P0",   3,     "US-A-Chi",                   asynMotor,  3,     "mm"}
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:DTI}",    "M0",   "P0",   4,     "DS-Inner-Flexure",           asynMotor,  3,     "mm"}
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:DTO}",    "M0",   "P0",   5,     "DS-Outer-Flexure",           asynMotor,  3,     "mm"}
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:DC}",     "M0",   "P0",   6,     "DS-A-Chi",                   asynMotor,  3,     "mm"}
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:7}",      "M0",   "P0",   7,     "7",                          asynMotor,  3,     "mm"}
-{"XF:10IDB-OP",  "{Mon:HRM:2-Ax:8}",      "M0",   "P0",   8,     "8",                          asynMotor,  3,     "mm"}
+{SYS,            DEV,                    MOTOR,  SPORT,  ADDR,  DESC,                         DTYP        PREC,  EGU}
+{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UTI}",    "M0",   "P0",   1,     "US-B-Theta-Inner-Flexure",   asynMotor,  3,     "mm"}
+{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UTO}",    "M0",   "P0",   2,     "US-AB-Theta-Outer-Flexure",  asynMotor,  3,     "mm"}
+{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UC}",     "M0",   "P0",   3,     "US-A-Chi",                   asynMotor,  3,     "mm"}
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DTI}",    "M0",   "P0",   4,     "DS-Inner-Flexure",           asynMotor,  3,     "mm"}
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DTO}",    "M0",   "P0",   5,     "DS-Outer-Flexure",           asynMotor,  3,     "mm"}
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DC}",     "M0",   "P0",   6,     "DS-A-Chi",                   asynMotor,  3,     "mm"}
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:7}",      "M0",   "P0",   7,     "7",                          asynMotor,  3,     "mm"}
+{"XF:10IDB-OP",  "{Mon:HRM2-Ax:8}",      "M0",   "P0",   8,     "8",                          asynMotor,  3,     "mm"}
 }
