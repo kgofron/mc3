@@ -1,4 +1,4 @@
-NAME=mc5
+NAME=mc8
 USER=softioc
-PORT=4005
+PORT=4008
 HOST=xf10idb-ioc1
