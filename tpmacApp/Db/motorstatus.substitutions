@@ -1,27 +1,27 @@
 file "db/motorstatus.db"
 {
 pattern
-{SYS,            DEV,                    PORT,  AXIS }
-{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UTI}",    "P0",  1    }
-{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UTO}",    "P0",  2    }
-{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UC}",     "P0",  3    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DTI}",    "P0",  4    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DTO}",    "P0",  5    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DC}",     "P0",  6    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:7}",      "P0",  7    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:8}",      "P0",  8    }
+{SYS,            DEV,               PORT,  AXIS }
+{"XF:10IDC-OP",  "{Slt:2-Ax:I}",    "P0",  1    }
+{"XF:10IDC-OP",  "{Slt:2-Ax:O}",    "P0",  2    }
+{"XF:10IDC-OP",  "{Slt:2-Ax:T}",    "P0",  3    }
+{"XF:10IDC-OP",  "{Slt:2-Ax:B}",    "P0",  4    }
+{"XF:10IDC-OP",  "{Slt:3-Ax:I}",    "P0",  5    }
+{"XF:10IDC-OP",  "{Slt:3-Ax:O}",    "P0",  6    }
+{"XF:10IDC-OP",  "{Slt:3-Ax:T}",    "P0",  7    }
+{"XF:10IDC-OP",  "{Slt:3-Ax:B}",    "P0",  8    }
 }
 
 file "db/pmacStatusAxis.db"
 {
 pattern
 {SYS,             DEV,           PORT,  AXIS }
-{"XF:10IDB-CT",   "{MC:4-Ax:1}", "P0",  1    }
-{"XF:10IDB-CT",   "{MC:4-Ax:2}", "P0",  2    }
-{"XF:10IDB-CT",   "{MC:4-Ax:3}", "P0",  3    }
-{"XF:10IDB-CT",   "{MC:4-Ax:4}", "P0",  4    }
-{"XF:10IDB-CT",   "{MC:4-Ax:5}", "P0",  5    }
-{"XF:10IDB-CT",   "{MC:4-Ax:6}", "P0",  6    }
-{"XF:10IDB-CT",   "{MC:4-Ax:7}", "P0",  7    }
-{"XF:10IDB-CT",   "{MC:4-Ax:8}", "P0",  8    }
+{"XF:10IDC-CT",   "{MC:8-Ax:1}", "P0",  1    }
+{"XF:10IDC-CT",   "{MC:8-Ax:2}", "P0",  2    }
+{"XF:10IDC-CT",   "{MC:8-Ax:3}", "P0",  3    }
+{"XF:10IDC-CT",   "{MC:8-Ax:4}", "P0",  4    }
+{"XF:10IDC-CT",   "{MC:8-Ax:5}", "P0",  5    }
+{"XF:10IDC-CT",   "{MC:8-Ax:6}", "P0",  6    }
+{"XF:10IDC-CT",   "{MC:8-Ax:7}", "P0",  7    }
+{"XF:10IDC-CT",   "{MC:8-Ax:8}", "P0",  8    }
 }

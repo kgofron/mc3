@@ -1,13 +1,13 @@
 file "db/motor.db"
 {
 pattern
-{P,              M,                      MOTOR,  PORT,  ADDR,  DESC,                         DTYP,      MRES,  EGU,  PREC,  ALIAS }
-{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UTI}Mtr", "M0",   "P0",  1,     "US-B-Theta-Inner-Flexure",   asynMotor, 0.001, "mm", 3,     ""    }
-{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UTO}Mtr", "M0",   "P0",  2,     "US-AB-Theta-Outer-Flexure",  asynMotor, 0.001, "mm", 3,     ""    }
-{"XF:10IDB-OP",  "{Mon:HRM1-Ax:UC}Mtr",  "M0",   "P0",  3,     "US-A-Chi",                   asynMotor, 0.001, "mm", 3,     ""    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DTI}Mtr", "M0",   "P0",  4,     "DS-Inner-Flexure",           asynMotor, 0.001, "mm", 3,     ""    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DTO}Mtr", "M0",   "P0",  5,     "DS-Outer-Flexure",           asynMotor, 0.001, "mm", 3,     ""    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:DC}Mtr",  "M0",   "P0",  6,     "DS-A-Chi",                   asynMotor, 0.001, "mm", 3,     ""    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:7}Mtr",   "M0",   "P0",  7,     "7",                          asynMotor, 0.001, "mm", 3,     ""    }
-{"XF:10IDB-OP",  "{Mon:HRM2-Ax:8}Mtr",   "M0",   "P0",  8,     "8",                          asynMotor, 0.001, "mm", 3,     ""    }
+{P,              M,                 MOTOR,  PORT,  ADDR,  DESC,     DTYP,      MRES,  EGU,  PREC,  ALIAS }
+{"XF:10IDC-OP",  "{Slt:2-Ax:I}Mtr", "M0",   "P0",  1,     "X in",   asynMotor, 0.001, "mm", 3,     ""    }
+{"XF:10IDC-OP",  "{Slt:2-Ax:O}Mtr", "M0",   "P0",  2,     "X out",  asynMotor, 0.001, "mm", 3,     ""    }
+{"XF:10IDC-OP",  "{Slt:2-Ax:T}Mtr", "M0",   "P0",  3,     "Y top",  asynMotor, 0.001, "mm", 3,     ""    }
+{"XF:10IDC-OP",  "{Slt:2-Ax:B}Mtr", "M0",   "P0",  4,     "Y bot",  asynMotor, 0.001, "mm", 3,     ""    }
+{"XF:10IDC-OP",  "{Slt:3-Ax:I}Mtr", "M0",   "P0",  5,     "X in",   asynMotor, 0.001, "mm", 3,     ""    }
+{"XF:10IDC-OP",  "{Slt:3-Ax:O}Mtr", "M0",   "P0",  6,     "X out",  asynMotor, 0.001, "mm", 3,     ""    }
+{"XF:10IDC-OP",  "{Slt:3-Ax:T}Mtr", "M0",   "P0",  7,     "Y top",  asynMotor, 0.001, "mm", 3,     ""    }
+{"XF:10IDC-OP",  "{Slt:3-Ax:B}Mtr", "M0",   "P0",  8,     "Y bot",  asynMotor, 0.001, "mm", 3,     ""    }
 }
