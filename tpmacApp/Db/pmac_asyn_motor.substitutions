@@ -1,13 +1,13 @@
 file "db/pmac_asyn_motor.db"
 {
 pattern
-{SYS,            DEV,               MOTOR,  SPORT,  ADDR,  DESC,     DTYP        PREC,  EGU}
-{"XF:10IDC-OP",  "{Slt:2-Ax:I}",    "M0",   "P0",   1,     "X in",   asynMotor,  3,     "mm"}
-{"XF:10IDC-OP",  "{Slt:2-Ax:O}",    "M0",   "P0",   2,     "X out",  asynMotor,  3,     "mm"}
-{"XF:10IDC-OP",  "{Slt:2-Ax:T}",    "M0",   "P0",   3,     "Y top",  asynMotor,  3,     "mm"}
-{"XF:10IDC-OP",  "{Slt:2-Ax:B}",    "M0",   "P0",   4,     "Y bot",  asynMotor,  3,     "mm"}
-{"XF:10IDC-OP",  "{Slt:3-Ax:I}",    "M0",   "P0",   5,     "X in",   asynMotor,  3,     "mm"}
-{"XF:10IDC-OP",  "{Slt:3-Ax:O}",    "M0",   "P0",   6,     "X out",  asynMotor,  3,     "mm"}
-{"XF:10IDC-OP",  "{Slt:3-Ax:T}",    "M0",   "P0",   7,     "Y top",  asynMotor,  3,     "mm"}
-{"XF:10IDC-OP",  "{Slt:3-Ax:B}",    "M0",   "P0",   8,     "Y bot",  asynMotor,  3,     "mm"}
+{SYS,            DEV,                     MOTOR,  SPORT,  ADDR,  DESC,                 DTYP        PREC,  EGU }
+{"XF:10IDA-OP",  "{Mon:VDCM-Ax:Y}",       "M0",   "P0",   1,     "Y",                  asynMotor,  4,     "mm"}
+{"XF:10IDA-OP",  "{Mon:VDCM-Ax:Brag}",    "M0",   "P0",   2,     "Theta",              asynMotor,  8,     "mrad"}
+{"XF:10IDA-OP",  "{Mon:VDCM-Ax:Z2}",      "M0",   "P0",   3,     "2nd crystal Y",      asynMotor,  8,     "mm"}
+{"XF:10IDA-OP",  "{Mon:VDCM-Ax:P}",       "M0",   "P0",   4,     "1st crystal pitch",  asynMotor,  5,     "urad"}
+{"XF:10IDA-OP",  "{Mon:VDCM-Ax:R}",       "M0",   "P0",   5,     "2nd crystal roll",   asynMotor,  6,     "urad"}
+{"XF:10IDA-BI",  "{BPM:1-Ax:Y}",          "M0",   "P0",   6,     "Y",                  asynMotor,  8,     "mm"}
+{"XF:10IDA-OP",  "{Mon:VDCM-Ax:7}",       "M0",   "P0",   7,     "Spare",              asynMotor,  3,     "mm"}
+{"XF:10IDA-OP",  "{Mon:VDCM-Ax:8}",       "M0",   "P0",   8,     "Spare",              asynMotor,  3,     "mm"}
 }
