@@ -1,11 +1,11 @@
 = IXS VDCM in hutch A
 
 == Axes ==
-M1: Y
-M2: Theta
-M3: 2nd crystal Y
-M4: 1st crystal pitch
-M5: 2nd crystal roll
-M6: XBPM1: Y
-
-
+[1] {Mon:VDCM-Ax:Y}	- VDCM Y
+[2] {Mon:VDCM-Ax:Brag}	- VDCM Bragg
+[3] {Mon:VDCM-Ax:Z2}	- VDCM 2nd crystal Y gap translation
+[4] {Mon:VDCM-Ax:P}	- VDCM First Crystal Pitch
+[5] {Mon:VDCM-Ax:R}	- VDCM Second Crystal Roll
+[6] {BPM:1-Ax:Y}	- XBPM 1 Foil Y (to Be changed to {BPM:1-Ax:YFoil})
+[7] {Mon:VDCM-Ax:7}	- Spare 7
+[8] {Mon:VDCM-Ax:8}	- Spare 8
