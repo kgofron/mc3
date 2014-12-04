@@ -1,15 +1,15 @@
 file "db/motorstatus.db"
 {
 pattern
-{SYS,            DEV,                     PORT,  AXIS }
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:Y}",       "P0",  1    }
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:Brag}",    "P0",  2    }
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:Z2}",      "P0",  3    }
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:P}",       "P0",  4    }
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:R}",       "P0",  5    }
-{"XF:10IDA-BI",  "{BPM:1-Ax:Y}",          "P0",  6    }
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:7}",       "P0",  7    }
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:8}",       "P0",  8    }
+{SYS,            DEV,                   PORT,  AXIS }
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:Y}",     "P0",  1    }
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:P}",     "P0",  2    }
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:Z2}",    "P0",  3    }
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:P1}",    "P0",  4    }
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:R2}",    "P0",  5    }
+{"XF:10IDA-BI",  "{BPM:1-Ax:YFoil}",    "P0",  6    }
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:7}",     "P0",  7    }
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:8}",     "P0",  8    }
 }
 
 file "db/pmacStatusAxis.db"

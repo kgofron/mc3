@@ -1,13 +1,13 @@
 file "db/pmac_asyn_motor.db"
 {
 pattern
-{SYS,            DEV,                     MOTOR,  SPORT,  ADDR,  DESC,                 DTYP        PREC,  EGU }
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:Y}",       "M0",   "P0",   1,     "Y",                  asynMotor,  4,     "mm"}
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:Brag}",    "M0",   "P0",   2,     "Theta",              asynMotor,  8,     "mrad"}
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:Z2}",      "M0",   "P0",   3,     "2nd crystal Y",      asynMotor,  8,     "mm"}
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:P}",       "M0",   "P0",   4,     "1st crystal pitch",  asynMotor,  5,     "urad"}
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:R}",       "M0",   "P0",   5,     "2nd crystal roll",   asynMotor,  6,     "urad"}
-{"XF:10IDA-BI",  "{BPM:1-Ax:Y}",          "M0",   "P0",   6,     "Y",                  asynMotor,  8,     "mm"}
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:7}",       "M0",   "P0",   7,     "Spare",              asynMotor,  3,     "mm"}
-{"XF:10IDA-OP",  "{Mon:VDCM-Ax:8}",       "M0",   "P0",   8,     "Spare",              asynMotor,  3,     "mm"}
+{SYS,            DEV,                   MOTOR,  SPORT,  ADDR,  DESC,                    DTYP        PREC,  EGU }
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:Y}",     "M0",   "P0",   1,     "Y translation",         asynMotor,  5,     "mm"}
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:P}",     "M0",   "P0",   2,     "Bragg",                 asynMotor,  6,     "deg"}
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:Z2}",    "M0",   "P0",   3,     "Gap 2nd crystal",       asynMotor,  5,     "mm"}
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:P1}",    "M0",   "P0",   4,     "Pitch 1st crystal",     asynMotor,  4,     "urad"}
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:R2}",    "M0",   "P0",   5,     "Roll 2nd crystal",      asynMotor,  6,     "urad"}
+{"XF:10IDA-BI",  "{BPM:1-Ax:YFoil}",    "M0",   "P0",   6,     "Y translation - foil",  asynMotor,  8,     "mm"}
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:7}",     "M0",   "P0",   7,     "Spare",                 asynMotor,  3,     "mm"}
+{"XF:10IDA-OP",  "{Mono:DCM-Ax:8}",     "M0",   "P0",   8,     "Spare",                 asynMotor,  3,     "mm"}
 }
