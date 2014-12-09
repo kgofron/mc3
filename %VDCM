@@ -9,3 +9,7 @@
 [6] {BPM:1-Ax:Y}	- XBPM 1 Foil Y (to Be changed to {BPM:1-Ax:YFoil})
 [7] {Mon:VDCM-Ax:7}	- Spare 7
 [8] {Mon:VDCM-Ax:8}	- Spare 8
+
+Offset set to 0.65 degree
+Offset values = -117133 (raw), -0.65 degree as read from pmac.
+Reverse motor direction in EPICS to NEGative
