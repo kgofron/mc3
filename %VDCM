@@ -1,14 +1,14 @@
 = IXS VDCM in hutch A
 
 == Axes ==
-[1] {Mon:VDCM-Ax:Y}	- VDCM Y
-[2] {Mon:VDCM-Ax:Brag}	- VDCM Bragg
-[3] {Mon:VDCM-Ax:Z2}	- VDCM 2nd crystal Y gap translation
-[4] {Mon:VDCM-Ax:P}	- VDCM First Crystal Pitch
-[5] {Mon:VDCM-Ax:R}	- VDCM Second Crystal Roll
-[6] {BPM:1-Ax:Y}	- XBPM 1 Foil Y (to Be changed to {BPM:1-Ax:YFoil})
-[7] {Mon:VDCM-Ax:7}	- Spare 7
-[8] {Mon:VDCM-Ax:8}	- Spare 8
+[1] {Mono:DCM-Ax:Y}	- VDCM Y
+[2] {Mono:DCM-Ax:P}	- VDCM Bragg
+[3] {Mono:DCM-Ax:Z2}	- VDCM 2nd crystal Y gap translation
+[4] {Mono:DCM-Ax:P1}	- VDCM First Crystal Pitch
+[5] {Mono:DCM-Ax:R2}	- VDCM Second Crystal Roll
+[6] {BPM:1-Ax:YFoil}	- XBPM 1 Foil Y (to Be changed to {BPM:1-Ax:YFoil})
+[7] {Mono:DCM-Ax:7}	- Spare 7
+[8] {Mono:DCM-Ax:8}	- Spare 8
 
 Offset set to 0.65 degree
 Offset values = -117133 (raw), -0.65 degree as read from pmac.
