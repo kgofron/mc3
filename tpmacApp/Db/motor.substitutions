@@ -1,13 +1,13 @@
 file "db/motor.db"
 {
 pattern
-{P,              M,                     MOTOR,  PORT,  ADDR,  DESC,                    DTYP,      MRES,             EGU,  PREC,  ALIAS }
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:Y}Mtr",  "M0",   "P0",  1,     "Y translation",         asynMotor, 5e-05,            "mm", 5,     ""    }
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:P}Mtr",  "M0",   "P0",  2,     "Bragg",                 asynMotor, 5.54922804001e-06, "deg", 6,     ""    }
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:Z2}Mtr", "M0",   "P0",  3,     "Gap 2nd crystal",       asynMotor, 5e-05,            "mm", 5,     ""    }
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:P1}Mtr", "M0",   "P0",  4,     "Pitch 1st crystal",     asynMotor, 0.0128205128205,  "urad", 4,     ""    }
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:R2}Mtr", "M0",   "P0",  5,     "Roll 2nd crystal",      asynMotor, 0.641025641026,   "urad", 6,     ""    }
-{"XF:10IDA-BI",  "{BPM:1-Ax:YFoil}Mtr", "M0",   "P0",  6,     "Y translation - foil",  asynMotor, 5e-05,            "mm", 8,     ""    }
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:7}Mtr",  "M0",   "P0",  7,     "Spare",                 asynMotor, 0.001,            "mm", 3,     ""    }
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:8}Mtr",  "M0",   "P0",  8,     "Spare",                 asynMotor, 0.001,            "mm", 3,     ""    }
+{P,              M,                    MOTOR,  PORT,  ADDR,  DESC,                 DTYP,      MRES,        EGU,  PREC,  ALIAS }
+{"XF:10IDD-OP",  "{Spec:1-Ax:2Th}Mtr", "M0",   "P0",  1,     "Arm TTH",            asynMotor, 5.364418e-06, "deg", 3,     ""    }
+{"XF:10IDD-OP",  "{Spec:1-Ax:Y1}Mtr",  "M0",   "P0",  2,     "Y1",                 asynMotor, 1e-06,       "mm", 3,     ""    }
+{"XF:10IDD-OP",  "{Spec:1-Ax:Y2}Mtr",  "M0",   "P0",  3,     "Y2",                 asynMotor, 1e-06,       "mm", 3,     ""    }
+{"XF:10IDD-OP",  "{Spec:1-Ax:Y3}Mtr",  "M0",   "P0",  4,     "Y3",                 asynMotor, 1e-06,       "mm", 3,     ""    }
+{"XF:10IDD-OP",  "{Spec:1-Ax:Th}Mtr",  "M0",   "P0",  5,     "Theta",              asynMotor, 0.001,       "deg", 3,     ""    }
+{"XF:10IDD-OP",  "{Env:1-Ax:Y1}Mtr",   "M0",   "P0",  6,     "Y1 local(B) / (A)",  asynMotor, 5e-05,       "mm", 3,     ""    }
+{"XF:10IDD-OP",  "{Env:1-Ax:Y2}Mtr",   "M0",   "P0",  7,     "Y2 local(B) / (A)",  asynMotor, 5e-05,       "mm", 3,     ""    }
+{"XF:10IDD-OP",  "{Env:1-Ax:Y3}Mtr",   "M0",   "P0",  8,     "Y3 local(B) / (A)",  asynMotor, 5e-05,       "mm", 3,     ""    }
 }

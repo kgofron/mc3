@@ -1,13 +1,13 @@
 file "db/pmac_asyn_motor.db"
 {
 pattern
-{SYS,            DEV,                   MOTOR,  SPORT,  ADDR,  DESC,                    DTYP        PREC,  EGU }
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:Y}",     "M0",   "P0",   1,     "Y translation",         asynMotor,  5,     "mm"}
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:P}",     "M0",   "P0",   2,     "Bragg",                 asynMotor,  6,     "deg"}
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:Z2}",    "M0",   "P0",   3,     "Gap 2nd crystal",       asynMotor,  5,     "mm"}
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:P1}",    "M0",   "P0",   4,     "Pitch 1st crystal",     asynMotor,  4,     "urad"}
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:R2}",    "M0",   "P0",   5,     "Roll 2nd crystal",      asynMotor,  6,     "urad"}
-{"XF:10IDA-BI",  "{BPM:1-Ax:YFoil}",    "M0",   "P0",   6,     "Y translation - foil",  asynMotor,  8,     "mm"}
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:7}",     "M0",   "P0",   7,     "Spare",                 asynMotor,  3,     "mm"}
-{"XF:10IDA-OP",  "{Mono:DCM-Ax:8}",     "M0",   "P0",   8,     "Spare",                 asynMotor,  3,     "mm"}
+{SYS,            DEV,                  MOTOR,  SPORT,  ADDR,  DESC,                 DTYP        PREC,  EGU}
+{"XF:10IDD-OP",  "{Spec:1-Ax:2Th}",    "M0",   "P0",   1,     "Arm TTH",            asynMotor,  3,     "deg"}
+{"XF:10IDD-OP",  "{Spec:1-Ax:Y1}",     "M0",   "P0",   2,     "Y1",                 asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{Spec:1-Ax:Y2}",     "M0",   "P0",   3,     "Y2",                 asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{Spec:1-Ax:Y3}",     "M0",   "P0",   4,     "Y3",                 asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{Spec:1-Ax:Th}",     "M0",   "P0",   5,     "Theta",              asynMotor,  3,     "deg"}
+{"XF:10IDD-OP",  "{Env:1-Ax:Y1}",      "M0",   "P0",   6,     "Y1 local(B) / (A)",  asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{Env:1-Ax:Y2}",      "M0",   "P0",   7,     "Y2 local(B) / (A)",  asynMotor,  3,     "mm"}
+{"XF:10IDD-OP",  "{Env:1-Ax:Y3}",      "M0",   "P0",   8,     "Y3 local(B) / (A)",  asynMotor,  3,     "mm"}
 }
