@@ -3,12 +3,12 @@
 < envPaths
 
 epicsEnvSet("ENGINEER",  "kgofron x5283")
-epicsEnvSet("LOCATION",  "740 IXS RG:A1")
+epicsEnvSet("LOCATION",  "740 IXS RG:D1")
 epicsEnvSet("STREAM_PROTOCOL_PATH", ".:../protocols:$(PMACUTIL)/protocol")
 
-epicsEnvSet("P",         "XF:10IDA-OP")
+epicsEnvSet("P",         "XF:10IDD-OP")
 epicsEnvSet("TP_PORT",   "P0")
-# epicsEnvSet("IOCNAME",   "mc2")
+# epicsEnvSet("IOCNAME",   "mc3")
 epicsEnvSet("IOC_PREFIX", "$(P){IOC:$(IOCNAME)}")
 
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
@@ -23,7 +23,7 @@ tpmac_registerRecordDeviceDriver(pdbbase)
 # pmacAsynIPConfigure() is a wrapper for drvAsynIPPort::drvAsynIPPortConfigure() and
 # pmacAsynIPPort::pmacAsynIPPortConfigureEos().
 # See pmacAsynIPPort.c
-pmacAsynIPConfigure("$(TP_PORT)", "xf10ida-mc2:1025")
+pmacAsynIPConfigure("$(TP_PORT)", "xf10idd-mc3:1025")
 # WARNING: a trace-mask of containing 0x10 will TRACE_FLOW (v. noisy!!)
 #asynSetTraceMask("$(TP_PORT)",-1,0x9)
 #asynSetTraceIOMask("$(TP_PORT)",-1,0x2)
@@ -78,6 +78,7 @@ dbLoadRecords("$(EPICS_BASE)/db/save_restoreStatus.db","P=$(IOC_PREFIX)")
 dbLoadRecords("$(EPICS_BASE)/db/iocAdminSoft.db","IOC=$(IOC_PREFIX)")
 save_restoreSet_status_prefix("$(IOC_PREFIX)")
 #asSetFilename("/cf-update/acf/default.acf")
+asSetFilename("/cf-update/acf/null.acf")
 
 iocInit()
 
@@ -91,5 +92,5 @@ create_monitor_set("info_settings.req", 15 , "")
 
 cd ${TOP}
 dbl > ./records.dbl
-system "cp ./records.dbl /cf-update/$HOSTNAME.$IOCNAME.dbl"
+#system "cp ./records.dbl /cf-update/$HOSTNAME.$IOCNAME.dbl"
 
