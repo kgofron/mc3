@@ -6,7 +6,7 @@ pattern
 {"XF:10IDD-OP",  "{Spec:1-Ax:Y1}Mtr",  "M0",   "P0",  2,     "Y1",                 asynMotor, 1e-06,       "mm", 6,     ""    }
 {"XF:10IDD-OP",  "{Spec:1-Ax:Y2}Mtr",  "M0",   "P0",  3,     "Y2",                 asynMotor, 1e-06,       "mm", 6,     ""    }
 {"XF:10IDD-OP",  "{Spec:1-Ax:Y3}Mtr",  "M0",   "P0",  4,     "Y3",                 asynMotor, 1e-06,       "mm", 6,     ""    }
-{"XF:10IDD-OP",  "{Spec:1-Ax:Th}Mtr",  "M0",   "P0",  5,     "Theta",              asynMotor, 0.001,       "deg", 6,     ""    }
+{"XF:10IDD-OP",  "{Spec:1-Ax:Th}Mtr",  "M0",   "P0",  5,     "Theta",              asynMotor, 0.0005,      "deg", 6,     ""    }
 {"XF:10IDD-OP",  "{Env:1-Ax:Y1}Mtr",   "M0",   "P0",  6,     "Y1 local(B) / (A)",  asynMotor, 5e-05,       "mm", 6,     ""    }
 {"XF:10IDD-OP",  "{Env:1-Ax:Y2}Mtr",   "M0",   "P0",  7,     "Y2 local(B) / (A)",  asynMotor, 5e-05,       "mm", 6,     ""    }
 {"XF:10IDD-OP",  "{Env:1-Ax:Y3}Mtr",   "M0",   "P0",  8,     "Y3 local(B) / (A)",  asynMotor, 5e-05,       "mm", 6,     ""    }
