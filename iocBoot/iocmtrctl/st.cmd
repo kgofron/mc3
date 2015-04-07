@@ -96,5 +96,5 @@ create_monitor_set("info_settings.req", 15 , "")
 
 cd ${TOP}
 dbl > ./records.dbl
-#system "cp ./records.dbl /cf-update/$HOSTNAME.$IOCNAME.dbl"
+system "cp ./records.dbl /cf-update/$HOSTNAME.$IOCNAME.dbl"
 
