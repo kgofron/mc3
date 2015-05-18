@@ -2,10 +2,13 @@ file "db/motor.db"
 {
 # ADDR ---> axis #
 pattern
-{ P,                M,                    MOTOR,  ADDR,   DESC,             DTYP }
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:P}",      "CS1",  6,      "VFM Pitch",      asynMotor }
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:R}",      "CS1",  7,      "VFM Roll",       asynMotor }
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:Y}",      "CS1",  8,      "VFM Vertical",   asynMotor }
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:Bend}",   "CS2",  6,      "VFM Bend",       asynMotor }
-{ "XF:28ID1-OP:A", "{Mir:VFM-Ax:Offset}", "CS2",  7,      "VFM Bend Offset",asynMotor }
+{ P,                M,                    MOTOR,  ADDR,   DESC,             DTYP,	MRES,	  EGU,  PREC,  ALIAS }
+{ "XF:10IDD-OP", "{Spec:1-Ax:2Thc}Mtr",   "CS2",  6,      "Arm TTH",       asynMotor, 1.0000,  "deg", 	6,     ""  }
+{ "XF:10IDD-OP", "{Spec:1-Ax:Y}Mtr",      "CS3",  6,      "Arm Y",     	   asynMotor, 1.0000,  "mm", 	6,     ""  }
+{ "XF:10IDD-OP", "{Spec:1-Ax:Yx}Mtr",     "CS3",  7,      "Arm Y Rx",      asynMotor, 1.0000,  "mrad", 	4,     ""  }
+{ "XF:10IDD-OP", "{Spec:1-Ax:Yz}Mtr",     "CS3",  8,      "Arm Y Rz",      asynMotor, 1.0000,  "mrad", 	4,     ""  }
+{ "XF:10IDD-OP", "{Spec:1-Ax:Thc}Mtr",    "CS4",  6,      "Arm TH",        asynMotor, 1.0000,  "deg", 	4,     ""  }
+{ "XF:10IDD-OP", "{Env:1-Ax:Y}Mtr",   	  "CS5",  6,      "Sample Y", 	   asynMotor, 1.0000,  "mm", 	5,     ""  }
+{ "XF:10IDD-OP", "{Env:1-Ax:Yx}Mtr",      "CS5",  7,      "Sample Y Rx",   asynMotor, 1.0000,  "mrad", 	5,     ""  }
+{ "XF:10IDD-OP", "{Env:1-Ax:Yz}Mtr",      "CS5",  8,      "Sample Y Rz",   asynMotor, 1.0000,  "mrad", 	5,     ""  }
 }

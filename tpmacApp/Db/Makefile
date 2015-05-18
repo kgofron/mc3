@@ -16,13 +16,15 @@ DB += motorstatus.substitutions
 DB += pmacStatus.substitutions
 DB += pmac_asyn_motor.substitutions
 DB += autohome.substitutions
+DB += cs.substitutions
 DB += asynComm.db
 DB_INSTALLS += $(EPICS_BASE)/db/pmac_asyn_motor.db
 DB_INSTALLS += $(EPICS_BASE)/db/motorstatus.db
 DB_INSTALLS += $(EPICS_BASE)/db/pmacStatusAxis.db
 DB_INSTALLS += $(EPICS_BASE)/db/pmacStatus.db
 DB_INSTALLS += $(EPICS_BASE)/db/autohome.db
-
+DB_INSTALLS += $(EPICS_BASE)/db/motorUtil.db
+DB_INSTALLS += $(EPICS_BASE)/db/iocAdminSoft.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

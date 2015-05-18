@@ -42,10 +42,18 @@ drvAsynMotorConfigure("M0", "pmacAsynMotor", 1, 9)
 # Initialize the coord-system(port,addr,cs,ref,prog#)
 # pmacAsynCoordCreate("$(TP_PORT)",0,1,1,10)
 # pmacAsynCoordCreate("$(TP_PORT)",0,2,2,10)
+pmacAsynCoordCreate("$(TP_PORT)",0,2,2,10)
+pmacAsynCoordCreate("$(TP_PORT)",0,3,3,10)
+pmacAsynCoordCreate("$(TP_PORT)",0,4,4,10)
+pmacAsynCoordCreate("$(TP_PORT)",0,5,5,10)
 
 # setup the coord-sys(portName,drvel-name,ref#(from create),nAxes+1)
 # drvAsynMotorConfigure("CS1","pmacAsynCoord",1,9)
 # drvAsynMotorConfigure("CS2","pmacAsynCoord",2,9)
+drvAsynMotorConfigure("CS2","pmacAsynCoord",2,9)
+drvAsynMotorConfigure("CS3","pmacAsynCoord",3,9)
+drvAsynMotorConfigure("CS4","pmacAsynCoord",4,9)
+drvAsynMotorConfigure("CS5","pmacAsynCoord",5,9)
 
 # change poll rates (card, poll-period in ms)
 pmacSetMovingPollPeriod(1, 100)
@@ -53,6 +61,17 @@ pmacSetIdlePollPeriod(1, 1000)
 pmacSetCoordMovingPollPeriod(5,200)
 pmacSetCoordIdlePollPeriod(5,2000)
 
+# Set coordinate system scaling
+# Default value is 10000
+# pmacSetCoordStepsPerUnit(CS,CS_axis, scaling_factor)
+pmacSetCoordStepsPerUnit(2, 6, 186413.5111)
+pmacSetCoordStepsPerUnit(3, 6, 1000000.0)
+pmacSetCoordStepsPerUnit(3, 7, 1000000.0)
+pmacSetCoordStepsPerUnit(3, 8, 1000000.0)
+pmacSetCoordStepsPerUnit(4, 6, 2000)
+pmacSetCoordStepsPerUnit(5, 6, 20000.0)
+pmacSetCoordStepsPerUnit(5, 7, 20000.0)
+pmacSetCoordStepsPerUnit(5, 8, 20000.0)
 
 ## Load record instances
 dbLoadTemplate("db/motor.substitutions")
@@ -61,6 +80,7 @@ dbLoadTemplate("db/pmacStatus.substitutions")
 dbLoadTemplate("db/pmac_asyn_motor.substitutions")
 dbLoadTemplate("db/autohome.substitutions")
 dbLoadTemplate("db/cs.substitutions")
+dbLoadRecords("db/motorUtil.db","$(CT_PREFIX)")
 dbLoadRecords("db/asynComm.db","P=$(MC_PREFIX),PORT=$(TP_PORT),ADDR=0")
 
 ## autosave/restore machinery
@@ -82,7 +102,7 @@ dbLoadRecords("$(EPICS_BASE)/db/save_restoreStatus.db","P=$(IOC_PREFIX)")
 dbLoadRecords("$(EPICS_BASE)/db/iocAdminSoft.db","IOC=$(IOC_PREFIX)")
 save_restoreSet_status_prefix("$(IOC_PREFIX)")
 #asSetFilename("/cf-update/acf/default.acf")
-asSetFilename("/cf-update/acf/null.acf")
+#asSetFilename("/cf-update/acf/null.acf")
 
 iocInit()
 
