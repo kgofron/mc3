@@ -2,13 +2,13 @@ file "db/motor.db"
 {
 # ADDR ---> axis #
 pattern
-{ P,                M,                    MOTOR,  ADDR,   DESC,             DTYP,	MRES,	  EGU,  PREC,  ALIAS }
-{ "XF:10IDD-OP", "{Spec:1-Ax:2Thc}Mtr",   "CS2",  6,      "Arm TTH",       asynMotor, 1.0000,  "deg", 	6,     ""  }
-{ "XF:10IDD-OP", "{Spec:1-Ax:Y}Mtr",      "CS3",  6,      "Arm Y",     	   asynMotor, 1.0000,  "mm", 	6,     ""  }
-{ "XF:10IDD-OP", "{Spec:1-Ax:Yx}Mtr",     "CS3",  7,      "Arm Y Rx",      asynMotor, 1.0000,  "mrad", 	6,     ""  }
-{ "XF:10IDD-OP", "{Spec:1-Ax:Yz}Mtr",     "CS3",  8,      "Arm Y Rz",      asynMotor, 1.0000,  "mrad", 	6,     ""  }
-{ "XF:10IDD-OP", "{Spec:1-Ax:Thc}Mtr",    "CS4",  6,      "Arm TH",        asynMotor, 1.0000,  "deg", 	4,     ""  }
-{ "XF:10IDD-OP", "{Env:1-Ax:Y}Mtr",   	  "CS5",  6,      "Sample Y", 	   asynMotor, 1.0000,  "mm", 	5,     ""  }
-{ "XF:10IDD-OP", "{Env:1-Ax:Yx}Mtr",      "CS5",  7,      "Sample Y Rx",   asynMotor, 1.0000,  "mrad", 	5,     ""  }
-{ "XF:10IDD-OP", "{Env:1-Ax:Yz}Mtr",      "CS5",  8,      "Sample Y Rz",   asynMotor, 1.0000,  "mrad", 	5,     ""  }
+{ P,                M,                    MOTOR,  ADDR,   DESC,             DTYP,	MRES,		EGU,	PREC,  VBAS,	ACCL,	ALIAS }
+{ "XF:10IDD-OP", "{Spec:1-Ax:2Thc}Mtr",   "CS2",  6,      "Arm TTH",       asynMotor, 5.364418E-6,  "deg", 	6,     0.053644,	2.0,    ""  }
+{ "XF:10IDD-OP", "{Spec:1-Ax:Y}Mtr",      "CS3",  6,      "Arm Y",     	   asynMotor, 1E-6,	    "mm", 	6,     0.01,		0.25,	""  }
+{ "XF:10IDD-OP", "{Spec:1-Ax:Yx}Mtr",     "CS3",  7,      "Arm Y Rx",      asynMotor, 1E-6,  	    "deg", 	6,     0.01,		0.25,	""  }
+{ "XF:10IDD-OP", "{Spec:1-Ax:Yz}Mtr",     "CS3",  8,      "Arm Y Rz",      asynMotor, 1E-6,  	    "deg", 	6,     0.01,		0.25,	""  }
+{ "XF:10IDD-OP", "{Spec:1-Ax:Thc}Mtr",    "CS4",  6,      "Arm TH",        asynMotor, 1.5625E-5,    "deg", 	5,     0.3125,		0.25,	""  }
+{ "XF:10IDD-OP", "{Env:1-Ax:Y}Mtr",   	  "CS5",  6,      "Sample Y", 	   asynMotor, 5E-5,  	    "mm", 	5,     0.01,		0.25,	""  }
+{ "XF:10IDD-OP", "{Env:1-Ax:Yx}Mtr",      "CS5",  7,      "Sample Y Rx",   asynMotor, 5E-5,  	    "deg", 	5,     0.01,		0.25,	""  }
+{ "XF:10IDD-OP", "{Env:1-Ax:Yz}Mtr",      "CS5",  8,      "Sample Y Rz",   asynMotor, 5E-5,  	    "deg", 	5,     0.01,		0.25,	""  }
 }

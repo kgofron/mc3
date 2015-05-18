@@ -11,6 +11,9 @@ record(motor,"$(P)$(M)")
     field(ERES,$(MRES="1"))
     field(EGU,"$(EGU="None")")
     field(PREC,$(PREC="6"))
+    field(VBAS,$(VBAS="0.01"))
+    field(VMAX,$(VMAX="0.01"))
+    field(ACCL,$(ACCL="0.25"))
 
     info(autosaveFields_pass0, "DVAL DIR DHLM DLLM TWV SREV MRES ERES RRES VBAS VELO VMAX ACCL BDST BVEL BACC RDBD DESC EGU RTRY UEIP URIP DLY RDBL PREC DISA DISP FOFF OFF FRAC OMSL JVEL JAR PCOF ICOF DCOF HVEL NTM NTMF")
 
