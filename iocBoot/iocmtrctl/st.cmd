@@ -12,7 +12,7 @@ epicsEnvSet("TP_PORT",   "P0")
 #epicsEnvSet("IOC_PREFIX", "$(P){IOC:$(IOCNAME)}")
 epicsEnvSet("MC",   "MC:11")
 epicsEnvSet("CT",   "XF:10IDD-CT")
-epicsEnvSet("IOC_PREFIX", "$(CT){IOC:$(MC)}")
+epicsEnvSet("IOC_PREFIX", "$(CT){IOC-$(MC)}")
 epicsEnvSet("MC_PREFIX", "$(CT){$(MC)}")
 
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
