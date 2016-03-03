@@ -44,7 +44,7 @@ drvAsynMotorConfigure("M0", "pmacAsynMotor", 1, 9)
 # pmacAsynCoordCreate("$(TP_PORT)",0,2,2,10)
 pmacAsynCoordCreate("$(TP_PORT)",0,2,2,11)
 pmacAsynCoordCreate("$(TP_PORT)",0,3,3,12)
-pmacAsynCoordCreate("$(TP_PORT)",0,4,4,11)
+pmacAsynCoordCreate("$(TP_PORT)",0,4,4,12)
 pmacAsynCoordCreate("$(TP_PORT)",0,5,5,12)
 
 # setup the coord-sys(portName,drvel-name,ref#(from create),nAxes+1)
@@ -80,8 +80,9 @@ dbLoadTemplate("db/pmacStatus.substitutions")
 dbLoadTemplate("db/pmac_asyn_motor.substitutions")
 dbLoadTemplate("db/autohome.substitutions")
 dbLoadTemplate("db/cs.substitutions")
-dbLoadRecords("db/motorUtil.db","$(CT_PREFIX)")
+dbLoadRecords("db/motorUtil.db","P=$(MC_PREFIX)")
 dbLoadRecords("db/asynComm.db","P=$(MC_PREFIX),PORT=$(TP_PORT),ADDR=0")
+dbLoadRecords("$(TOP)/iocBoot/$(IOC)/write_var.db","P=$(IOC_PREFIX),R=AirOn,PORT=$(TP_PORT),ADDR=0,VAR=M32")
 
 ## autosave/restore machinery
 save_restoreSet_Debug(0)
@@ -113,6 +114,9 @@ cd ${TOP}/as/req
 makeAutosaveFiles()
 create_monitor_set("info_positions.req", 5 , "")
 create_monitor_set("info_settings.req", 15 , "")
+
+# New Target Monitor
+#dbpf("XF:10IDD-OP{Spec:1-Ax:2Thc}Mtr.NTM","0")
 
 cd ${TOP}
 dbl > ./records.dbl
