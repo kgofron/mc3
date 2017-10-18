@@ -119,6 +119,9 @@ create_monitor_set("info_settings.req", 15 , "")
 #dbpf("XF:10IDD-OP{Spec:1-Ax:2Thc}Mtr.NTM","0")
 
 cd ${TOP}
+# Spectrometer Y1, Y2, Y3 offset
+system "./offsetSpectrometer.sh"
+
 dbl > ./records.dbl
 system "cp ./records.dbl /cf-update/$HOSTNAME.$IOCNAME.dbl"
 
